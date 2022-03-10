@@ -1,0 +1,3041 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="author" content="Projeto Boto-Cinza" />
+
+
+
+<title>Áreas de Estudo</title>
+
+<meta property="og:title" content="Áreas de Estudo" />
+
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+
+<link rel="icon" href="data:image/x-icon;" type="image/x-icon">
+
+
+<script type="text/javascript">
+window.FlexDashboardComponents = [];
+</script>
+
+<script id="flexdashboard-navbar" type="application/json">
+[{"title":"Source Code","icon":"fa-code","href":"source_embed","align":"right"}]
+</script>
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/stickytableheaders-0.1.19/jquery.stickytableheaders.min.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/featherlight-1.3.5/featherlight.min.css" rel="stylesheet" />
+<script src="site_libs/featherlight-1.3.5/featherlight.min.js"></script>
+<link href="site_libs/prism-1.4.1/prism.css" rel="stylesheet" />
+<script src="site_libs/prism-1.4.1/prism.js"></script>
+<script src="site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="site_libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-binding-2.0.4.1/leaflet.js"></script>
+<script src="site_libs/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script>
+<script src="site_libs/leaflet-providers-plugin-2.0.4.1/leaflet-providers-plugin.js"></script>
+<link href="site_libs/leaflet-measure-2.1.7/leaflet-measure.css" rel="stylesheet" />
+<script src="site_libs/leaflet-measure-2.1.7/leaflet-measure.min.js"></script>
+<style type="text/css">
+
+/*
+ Dashboard CSS from Keen IO Dashboards
+ (https://github.com/keen/dashboards)
+*/
+
+body {
+  background: #f2f2f2;
+  padding: 60px 0 0 8px; /* padding-top overridden by theme */
+}
+
+body hr {
+  border-color: #d7d7d7;
+  margin: 10px 0;
+}
+
+.navbar-inverse .navbar-nav > li > a,
+.navbar .navbar-brand {
+  text-decoration: none;
+}
+
+.navbar-logo {
+  margin-top: 1px;
+}
+
+.navbar-logo img {
+  margin-right: 12px;
+}
+
+.navbar-author {
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+.navbar .dropdown-menu .fa {
+  min-width: 20px;
+}
+
+.navbar .dropdown-menu {
+  min-width: 150px;
+  max-height: 500px;
+  overflow: auto;
+}
+
+.chart-wrapper,
+.nav-tabs-custom,
+.sbframe-commentary
+{
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  border-radius: 3px;
+  margin-bottom: 8px;
+  margin-right: 8px;
+}
+
+.chart-title {
+  border-bottom: 1px solid #d7d7d7;
+  color: #666;
+  font-size: 14px;
+  font-weight: 300;
+  padding: 7px 10px 4px;
+}
+
+.chart-wrapper .chart-title:empty {
+  display: none;
+}
+
+.chart-wrapper .chart-stage {
+  overflow: hidden;
+  padding: 5px 10px;
+  position: relative;
+}
+
+.chart-wrapper .chart-notes {
+  background: #fbfbfb;
+  border-top: 1px solid #e2e2e2;
+  color: #808080;
+  font-size: 12px;
+  padding: 8px 10px 5px;
+}
+
+/*
+ CSS for handling flexbox layout
+*/
+
+#dashboard-container {
+  visibility: hidden;
+}
+
+.tab-content>.dashboard-page-wrapper.active {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dashboard-page-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.dashboard-row-orientation {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.dashboard-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.dashboard-row-flex {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.dashboard-column-orientation {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.dashboard-column {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.chart-wrapper-flex {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.chart-stage-flex {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+}
+
+.chart-shim {
+  position: absolute;
+  left: 8px; top: 8px; right: 8px; bottom: 8px;
+}
+
+.no-padding .chart-shim {
+  left: 0; top: 0; right: 0; bottom: 0;
+}
+
+.flowing-content-shim {
+  overflow: auto;
+  left: 0; top: 0; right: 0; bottom: 0;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.flowing-content-container {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.chart-stage .table-bordered {
+  border: none;
+}
+
+.chart-stage .table-bordered > tbody > tr > th,
+.chart-stage .table-bordered > tfoot > tr > th,
+.chart-stage .table-bordered > tbody > tr > td,
+.chart-stage .table-bordered > tfoot > tr > td {
+  border: none;
+}
+
+.chart-stage .table-bordered > tbody > tr > td {
+  border-top: 1px solid #dddddd;
+}
+
+.chart-stage .table-bordered > thead > tr > th {
+  border: none;
+  border-bottom: 2px solid #dddddd;
+}
+
+.bootstrap-table table>thead {
+  background-color: #fff;
+}
+
+.bootstrap-table table.data,
+.bootstrap-table table.shiny-table {
+  width: inherit !important;
+}
+
+.bootstrap-table table.data>tbody>tr>th,
+.bootstrap-table table.shiny-table>tbody>tr>th {
+  border-top: none;
+  border-bottom: 2px solid #dddddd;
+  padding: 5px;
+}
+
+.bootstrap-table .data td[align=right] {
+  font-family: inherit;
+}
+
+.chart-wrapper form {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.shiny-input-container label {
+  font-weight: normal;
+}
+
+.chart-stage .html-widget {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.chart-stage .html-widget-static-bound {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.chart-stage .shiny-bound-output {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Omit display of empty paragraphs */
+
+.chart-shim>p:empty {
+  display: none;
+}
+
+.chart-stage>p:empty {
+  display: none;
+}
+
+/* Omit display of special knitr options div*/
+
+.chart-stage .knitr-options {
+  display: none;
+}
+
+/* Automatically resizing images */
+
+.image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+}
+
+.image-container img {
+  opacity: 0;
+  overflow: hidden;
+}
+
+/* Value box */
+
+.value-box {
+  border-radius: 2px;
+  position: relative;
+  display: block;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.value-box > .inner {
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.value-box .value {
+  font-size: 38px;
+  font-weight: bold;
+  margin: 0 0 3px 0;
+  white-space: nowrap;
+  padding: 0;
+}
+
+.value-box .caption {
+  font-size: 15px;
+}
+.value-box .caption > small {
+  display: block;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.value-box .icon i {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 80px;
+  color: rgba(0, 0, 0, 0.15);
+}
+
+.linked-value:hover {
+  cursor: pointer;
+}
+
+.value-box.linked-value:hover {
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* STORYBOARD */
+
+.storyboard-nav button {
+  background: transparent;
+  border: 0;
+  opacity: .3;
+  outline: none;
+  padding: 0;
+}
+
+.storyboard-nav button:hover,
+.storyboard-nav button:hover {
+  opacity: .5;
+}
+
+.storyboard-nav button:disabled,
+.storyboard-nav button:disabled {
+  opacity: .1;
+}
+
+.storyboard-nav .sbnext,
+.storyboard-nav .sbprev {
+  float: left;
+  width: 2%;
+  height: 120px;
+  font-size: 50px;
+}
+
+.storyboard-nav .sbprev {
+  text-align: left;
+  width: 2%;
+}
+
+.storyboard-nav .sbnext {
+  float: right;
+  text-align: right;
+  margin-right: 8px;
+}
+
+.storyboard-nav .sbframelist {
+  margin: 0 auto;
+  width: 94%;
+  height: 120px;
+  overflow: hidden;
+  text-shadow: none;
+  margin-bottom: 8px;
+}
+
+.storyboard-nav .sbframelist ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.storyboard-nav .sbframelist ul li {
+  float: left;
+  width: 270px;
+  height: 100%;
+  padding: 10px 10px 10px 10px;
+  margin-right: 8px;
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  border-radius: 3px;
+  color: #3a3c47;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.storyboard-nav .sbframelist ul li:last-child {
+  margin-right: 0px;
+}
+
+.storyboard-nav .sbframelist ul li.active {
+  color: #fff;
+  background: #B8B8B8;
+}
+
+.sbframe-commentary {
+  width: 300px;
+  background: #fbfbfb;
+  font-size: 14px;
+}
+
+.sbframe-commentary ul {
+  padding-left: 22px;
+}
+
+.sbframe.active {
+  display: flex;
+}
+
+.sbframe:not(.active) {
+  display: none;
+}
+
+/* NAV TABS */
+
+.nav-tabs-custom > .nav-tabs {
+  margin: 0;
+  border-bottom: 1px solid #d7d7d7;
+  color: #666;
+  font-size: 14px;
+  font-weight: 300;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+.nav-tabs-custom > .nav-tabs > li {
+  border-top: 3px solid transparent;
+  margin-bottom: -1px;
+  margin-right: 5px;
+}
+.nav-tabs-custom > .nav-tabs > li > a,
+.nav-tabs-custom > .nav-tabs > li > a:active {
+  color: #666;
+  font-weight: 300;
+  font-size: 14px;
+  border-radius: 0;
+  padding: 3px 10px 5px;
+  text-transform: none;
+}
+
+.nav-tabs-custom > .nav-tabs > li:not(.active) > a {
+  border-bottom-color: transparent;
+}
+
+.nav-tabs-custom > .nav-tabs > li > a.text-muted {
+  color: #999;
+}
+.nav-tabs-custom > .nav-tabs > li > a,
+.nav-tabs-custom > .nav-tabs > li > a:hover {
+  background: transparent;
+  margin: 0;
+}
+.nav-tabs-custom > .nav-tabs > li > a:hover {
+  color: #999;
+}
+.nav-tabs-custom > .nav-tabs > li:not(.active) > a:hover,
+.nav-tabs-custom > .nav-tabs > li:not(.active) > a:focus,
+.nav-tabs-custom > .nav-tabs > li:not(.active) > a:active {
+  border-color: transparent;
+}
+.nav-tabs-custom > .nav-tabs > li.active {
+  border-top-color: #3c8dbc;
+}
+.nav-tabs-custom > .nav-tabs > li.active > a,
+.nav-tabs-custom > .nav-tabs > li.active:hover > a {
+  background-color: #fff;
+  color: #666;
+}
+.nav-tabs-custom > .nav-tabs > li.active > a {
+  border-top-color: transparent;
+  border-left-color: #d7d7d7;
+  border-right-color: #d7d7d7;
+}
+.nav-tabs-custom > .nav-tabs > li:first-of-type {
+  margin-left: 0;
+}
+.nav-tabs-custom > .nav-tabs > li:first-of-type.active > a {
+  border-left-color: transparent;
+}
+.nav-tabs-custom > .nav-tabs.pull-right {
+  float: none !important;
+}
+.nav-tabs-custom > .nav-tabs.pull-right > li {
+  float: right;
+}
+.nav-tabs-custom > .nav-tabs.pull-right > li:first-of-type {
+  margin-right: 0;
+}
+.nav-tabs-custom > .nav-tabs.pull-right > li:first-of-type > a {
+  border-left-width: 1px;
+}
+.nav-tabs-custom > .nav-tabs.pull-right > li:first-of-type.active > a {
+  border-left-color: #d7d7d7;
+  border-right-color: transparent;
+}
+.nav-tabs-custom > .nav-tabs > li.header {
+  line-height: 35px;
+  padding: 0 10px;
+  font-size: 20px;
+  color: #666;
+}
+.nav-tabs-custom > .nav-tabs > li.header > .fa,
+.nav-tabs-custom > .nav-tabs > li.header > .glyphicon,
+.nav-tabs-custom > .nav-tabs > li.header > .ion {
+  margin-right: 5px;
+}
+.nav-tabs-custom > .tab-content {
+  background: #fff;
+  padding: 0;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav-tabs-custom > .tab-content > .chart-wrapper {
+  background: #fff;
+  border: none;
+  margin: 0;
+}
+
+
+.nav-tabs-custom > .tab-content > .active {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav-tabs-custom .dropdown.open > a:active,
+.nav-tabs-custom .dropdown.open > a:focus {
+  background: transparent;
+  color: #999;
+}
+
+
+@media (max-width: 767px) {
+  .value-box {
+    text-align: center;
+    margin-right: 8px;
+  }
+  .value-box .icon {
+    display: none;
+  }
+}
+
+/* Fixed position sidebar */
+
+.section.sidebar {
+  position: fixed;
+  top: 51px; /* overridden by theme */
+  left: 0;
+  bottom: 0;
+  border-right: 1px solid #e2e2e2;
+  background-color: white; /* overridden by theme */
+  padding-left: 10px;
+  padding-right: 10px;
+  visibility: hidden;
+  overflow: auto;
+}
+
+.section.sidebar form p:first-child {
+  margin-top: 10px;
+}
+
+/* Embedded source code */
+
+#flexdashboard-source-code {
+  display: none;
+}
+
+.featherlight-content #flexdashboard-source-code {
+  display: inline-block;
+}
+
+.featherlight-content {
+  width: 80%;
+  max-width: 800px;
+  padding: 0 !important;
+  border-bottom: none !important;
+}
+
+.featherlight:last-of-type {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.featherlight-inner {
+  width: 100%;
+}
+
+.featherlight-content pre {
+  margin: 0;
+  border: 0;
+  background: #fff;
+  font-size: 12px;
+}
+
+.unselectable {
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: -moz-none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+#flexdashboard-source-code code {
+  -ms-user-select: text;
+  -webkit-user-select: text;
+  -khtml-user-select: text;
+  -moz-user-select: text;
+  -o-user-select: text;
+  user-select: text;
+}
+
+/* DataTables Tweaks */
+
+.dataTables_filter input[type="search"] {
+  -webkit-appearance: searchfield;
+  outline: none;
+}
+
+.dataTables_wrapper.no-footer
+.dataTables_info {
+  padding-top: 0;
+}
+
+
+table.dataTable thead th {
+  border-bottom: 1px solid #d7d7d7;
+}
+
+.dataTables_wrapper.no-footer .dataTables_scrollBody {
+  border-bottom: 1px solid #d7d7d7;
+}
+
+/* Mobile phone only CSS */
+
+.desktop-layout div.section.mobile {
+  display: none;
+}
+
+.mobile-layout div.section.no-mobile {
+  display: none;
+}
+
+.mobile-figure {
+  display: none;
+}
+
+
+
+body {
+  padding-top: 73px;
+}
+
+.section.sidebar {
+  top: 64px;
+  background-color: rgba(33, 150, 243, 0.15);
+}
+
+.value-box {
+  color: inherit;
+}
+
+.bg-primary {
+  background-color: rgba(33, 150, 243, 0.35);
+}
+
+.storyboard-nav .sbframelist ul li.active {
+  background-color: rgba(33, 150, 243, 0.7);
+}
+
+.nav-tabs-custom > .nav-tabs > li.active {
+  border-top-color: transparent;
+}
+
+.nav-tabs-custom > .nav-tabs > li > a:hover,
+.nav-tabs-custom > .nav-tabs > li > a:focus:hover {
+  background-color: transparent;
+  -webkit-box-shadow: inset 0 -2px 0 rgba(33, 150, 243, 0.7);
+  box-shadow: inset 0 -2px 0 rgba(33, 150, 243, 0.7);
+  color: rgba(33, 150, 243, 0.7);
+}
+.nav-tabs-custom > .nav-tabs > li.active > a,
+.nav-tabs-custom > .nav-tabs > li.active > a:focus {
+  border: none;
+  -webkit-box-shadow: inset 0 -2px 0 rgba(33, 150, 243, 0.7);
+  box-shadow: inset 0 -2px 0 rgba(33, 150, 243, 0.7);
+  /*color: rgba(33, 150, 243, 0.7);*/
+}
+.nav-tabs-custom > .nav-tabs > li.active > a:hover,
+.nav-tabs-custom > .nav-tabs > li.active > a:focus:hover {
+  border: none;
+  /*color: rgba(33, 150, 243, 0.7);*/
+}
+
+@media only screen and (min-width: 768px) {
+html, body {
+  height: 100%;
+}
+
+#dashboard-container {
+  height: 100%;
+}
+}
+</style>
+
+
+
+</head>
+
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<div class="container-fluid">
+<div class="navbar-header">
+
+<button id="navbar-button" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+
+<span class="navbar-logo pull-left">
+  
+</span>
+<span class="navbar-brand">
+  Áreas de Estudo
+  <span class="navbar-author">
+    Projeto Boto-Cinza
+    </span>
+</span>
+
+</div>
+<div id="navbar" class="navbar-collapse collapse">
+<ul class="nav navbar-nav navbar-left">
+</ul>
+<ul class="nav navbar-nav navbar-right">
+</ul>
+</div><!--/.nav-collapse-->
+</div><!--/.container-->
+</div><!--/.navbar-->
+
+<script type="text/javascript">
+
+
+var FlexDashboard = (function () {
+
+  // initialize options
+  var _options = {};
+
+  var FlexDashboard = function() {
+
+    // default options
+    _options = $.extend(_options, {
+      theme: "cosmo",
+      fillPage: false,
+      orientation: 'columns',
+      storyboard: false,
+      defaultFigWidth: 576,
+      defaultFigHeight: 461,
+      defaultFigWidthMobile: 360,
+      defaultFigHeightMobile: 461,
+      isMobile: false,
+      isPortrait: false,
+      resize_reload: true
+    });
+  };
+
+  function init(options) {
+
+    // extend default options
+    $.extend(true, _options, options);
+
+    // add ids to sections that don't have them (pandoc won't assign ids
+    // to e.g. sections with titles consisting of only chinese characters)
+    var nextId = 1;
+    $('.level1:not([id]),.level2:not([id]),.level3:not([id])').each(function() {
+      $(this).attr('id', 'dashboard-' + nextId++);
+    });
+
+    // find navbar items
+    var navbarItems = $('#flexdashboard-navbar');
+    if (navbarItems.length)
+      navbarItems = JSON.parse(navbarItems.html());
+    addNavbarItems(navbarItems);
+
+    // find the main dashboard container
+    var dashboardContainer = $('#dashboard-container');
+
+    // resolve mobile classes
+    resolveMobileClasses(dashboardContainer);
+
+    // one time global initialization for components
+    componentsInit(dashboardContainer);
+
+    // look for a global sidebar
+    var globalSidebar = dashboardContainer.find(".section.level1.sidebar");
+    if (globalSidebar.length > 0) {
+
+      // global layout for fullscreen displays
+      if (!isMobilePhone()) {
+
+         // hoist it up to the top level
+         globalSidebar.insertBefore(dashboardContainer);
+
+         // lay it out (set width/positions)
+         layoutSidebar(globalSidebar, dashboardContainer);
+
+      // tuck sidebar into first page for mobile phones
+      } else {
+
+        // convert it into a level3 section
+        globalSidebar.removeClass('sidebar');
+        globalSidebar.removeClass('level1');
+        globalSidebar.addClass('level3');
+        var h1 = globalSidebar.children('h1');
+        var h3 = $('<h3></h3>');
+        h3.append(h1.contents());
+        h3.insertBefore(h1);
+        h1.detach();
+
+        // move it into the first page
+        var page = dashboardContainer.find('.section.level1').first();
+        if (page.length > 0)
+          page.prepend(globalSidebar);
+      }
+    }
+
+    // look for pages to layout
+    var pages = $('div.section.level1');
+    if (pages.length > 0) {
+
+        // find the navbar and collapse on clicked
+        var navbar = $('#navbar');
+        navbar.on("click", "a[data-toggle!=dropdown]", null, function () {
+           navbar.collapse('hide');
+        });
+
+        // envelop the dashboard container in a tab content div
+        dashboardContainer.wrapInner('<div class="tab-content"></div>');
+
+        pages.each(function(index) {
+
+          // lay it out
+          layoutDashboardPage($(this));
+
+          // add it to the navbar
+          addToNavbar($(this), index === 0);
+
+        });
+
+    } else {
+
+      // remove the navbar and navbar button if we don't
+      // have any navbuttons
+      if (navbarItems.length === 0) {
+        $('#navbar').remove();
+        $('#navbar-button').remove();
+      }
+
+      // add the storyboard class if requested
+      if (_options.storyboard)
+        dashboardContainer.addClass('storyboard');
+
+      // layout the entire page
+      layoutDashboardPage(dashboardContainer);
+    }
+
+    // if we are in shiny we need to trigger a window resize event to
+    // force correct layout of shiny-bound-output elements
+    if (isShinyDoc())
+      $(window).trigger('resize');
+
+    // make main components visible
+    $('.section.sidebar').css('visibility', 'visible');
+    dashboardContainer.css('visibility', 'visible');
+
+    // handle location hash
+    handleLocationHash();
+
+    // intialize prism highlighting
+    initPrismHighlighting();
+
+    // record mobile and orientation state then register a handler
+    // to refresh if resize_reload is set to true and it changes
+    _options.isMobile = isMobilePhone();
+    _options.isPortrait = isPortrait();
+    if (_options.resize_reload) {
+      $(window).on('resize', function() {
+        if (_options.isMobile !== isMobilePhone() ||
+            _options.isPortrait !== isPortrait()) {
+          window.location.reload();
+        }
+      });
+    } else {
+      // if in desktop mode and resizing to mobile, make sure the heights are 100%
+      // This enforces what `fillpage.css` does for "wider" pages.
+      // Since we are not reloading once the page becomes small, we need to force the height to 100%
+      // This is a new situation introduced when `_options.resize_reload` is `false`
+      if (! _options.isMobile) {
+        // only add if `fillpage.css` was added in the first place
+        if (_options.fillPage) {
+          // fillpage.css
+          $("html,body,#dashboard").css("height", "100%");
+        }
+      }
+    }
+    // trigger layoutcomplete event
+    dashboardContainer.trigger('flexdashboard:layoutcomplete');
+  }
+
+  function resolveMobileClasses(dashboardContainer) {
+     // add top level layout class
+    dashboardContainer.addClass(isMobilePhone() ? 'mobile-layout' :
+                                                  'desktop-layout');
+
+    // look for .mobile sections and add .no-mobile to their peers
+    var mobileSections = $('.section.mobile');
+    mobileSections.each(function() {
+       var id = $(this).attr('id');
+       var nomobileId = id.replace(/-\d+$/, '');
+       $('#' + nomobileId).addClass('no-mobile');
+    });
+  }
+
+  function addNavbarItems(navbarItems) {
+
+    var navbarLeft = $('ul.navbar-left');
+    var navbarRight = $('ul.navbar-right');
+
+    for (var i = 0; i<navbarItems.length; i++) {
+
+      // get the item
+      var item = navbarItems[i];
+
+      // determine the container
+      var container = null;
+      if (item.align === "left")
+        container = navbarLeft;
+      else
+        container = navbarRight;
+
+      // navbar menu if we have multiple items
+      if (item.items) {
+        var menu = navbarMenu(null, item.icon, item.title, container);
+        for (var j = 0; j<item.items.length; j++) {
+          var subItem = item.items[j];
+          var li = $('<li></li>');
+          li.append(navbarLink(subItem.icon, subItem.title, subItem.href, subItem.target));
+          menu.append(li);
+        }
+      } else {
+        var li = $('<li></li>');
+        li.append(navbarLink(item.icon, item.title, item.href, item.target));
+        container.append(li);
+      }
+    }
+  }
+
+  // create or get a reference to an existing dropdown menu
+  function navbarMenu(id, icon, title, container) {
+    var existingMenu = [];
+    if (id)
+      existingMenu = container.children('#' + id);
+    if (existingMenu.length > 0) {
+      return existingMenu.children('ul');
+    } else {
+      var li = $('<li></li>');
+      if (id)
+        li.attr('id', id);
+      li.addClass('dropdown');
+      // auto add "Share" title on mobile if necessary
+      if (!title && icon && (icon === "fa-share-alt") && isMobilePhone())
+        title = "Share";
+      if (title) {
+        title = title + ' <span class="caret"></span>';
+      }
+      var a = navbarLink(icon, title, "#");
+      a.addClass('dropdown-toggle');
+      a.attr('data-toggle', 'dropdown');
+      a.attr('role', 'button');
+      a.attr('aria-expanded', 'false');
+      li.append(a);
+      var ul = $('<ul class="dropdown-menu"></ul>');
+      ul.attr('role', 'menu');
+      li.append(ul);
+      container.append(li);
+      return ul;
+    }
+  }
+
+  function addToNavbar(page, active) {
+
+    // capture the id and data-icon attribute (if any)
+    var id = page.attr('id');
+    var icon = page.attr('data-icon');
+    var navmenu = page.attr('data-navmenu');
+
+    // get hidden state (transfer this to navbar)
+    var hidden = page.hasClass('hidden');
+    page.removeClass('hidden');
+
+    // sanitize the id for use with bootstrap tabs
+    id = id.replace(/[.\/?&!#<>]/g, '').replace(/\s/g, '_');
+    page.attr('id', id);
+
+    // get the wrapper
+    var wrapper = page.closest('.dashboard-page-wrapper');
+
+    // move the id to the wrapper
+    page.removeAttr('id');
+    wrapper.attr('id', id);
+
+    // add the tab-pane class to the wrapper
+    wrapper.addClass('tab-pane');
+    if (active)
+      wrapper.addClass('active');
+
+    // get a reference to the h1, discover its inner contens, then detach it
+    var h1 = wrapper.find('h1').first();
+    var title = h1.contents();
+    h1.detach();
+
+    // create a navbar item
+    var li = $('<li></li>');
+    var a = navbarLink(icon, title, '#' + id);
+    a.attr('data-toggle', 'tab');
+    li.append(a);
+
+    // add it to the navbar (or navbar menu if specified)
+    var container = $('ul.navbar-left');
+    if (navmenu) {
+      var menuId = navmenu.replace(/\s+/g, '');
+      var menu = navbarMenu(menuId, null, navmenu, container);
+      menu.append(li);
+    } else {
+      container.append(li);
+    }
+
+    // hide it if requested
+    if (hidden)
+      li.addClass('hidden');
+  }
+
+  function navbarLink(icon, title, href, target) {
+
+    var a = $('<a></a>');
+    if (icon) {
+
+      // get the name of the icon set and icon
+      var dashPos = icon.indexOf("-");
+      var iconSet = null;
+      var iconSplit = icon.split(" ");
+      if (iconSplit.length > 1) {
+        iconSet = iconSplit[0];
+        icon = iconSplit.slice(1).join(" ");
+      } else {
+        iconSet = icon.substring(0, dashPos);
+      }
+      var iconName = icon.substring(dashPos + 1);
+
+      // create the icon
+      var iconElement = $('<span class="' + iconSet + ' ' + icon + '"></span>');
+      if (title)
+        iconElement.css('margin-right', '7px');
+      a.append(iconElement);
+      // if href is null see if we can auto-generate based on icon (e.g. social)
+      if (!href)
+        maybeGenerateLinkFromIcon(iconName, a);
+    }
+    if (title)
+      a.append(title);
+
+    // add the href.
+    if (href) {
+      if (href === "source_embed") {
+        a.attr('href', '#');
+        a.attr('data-featherlight', "#flexdashboard-source-code");
+        a.featherlight({
+            beforeOpen: function(event){
+              $('body').addClass('unselectable');
+            },
+            afterClose: function(event){
+              $('body').removeClass('unselectable');
+            }
+        });
+      } else {
+        a.attr('href', href);
+      }
+    }
+
+    // add the arget
+    if (target)
+      a.attr('target', target);
+
+    return a;
+  }
+
+  // auto generate a link from an icon name (e.g. twitter) when possible
+  function maybeGenerateLinkFromIcon(iconName, a) {
+
+     var serviceLinks = {
+      "twitter": "https://twitter.com/share?text=" + encodeURIComponent(document.title) + "&url="+encodeURIComponent(location.href),
+      "facebook": "https://www.facebook.com/sharer/sharer.php?s=100&p[url]="+encodeURIComponent(location.href),
+      "google-plus": "https://plus.google.com/share?url="+encodeURIComponent(location.href),
+      "linkedin": "https://www.linkedin.com/shareArticle?mini=true&url="+encodeURIComponent(location.href) + "&title=" + encodeURIComponent(document.title),
+      "pinterest": "https://pinterest.com/pin/create/link/?url="+encodeURIComponent(location.href) + "&description=" + encodeURIComponent(document.title)
+    };
+
+    var makeSocialLink = function(a, href) {
+      a.attr('href', '#');
+      a.on('click', function(e) {
+        e.preventDefault();
+        window.open(href);
+      });
+    };
+
+    $.each(serviceLinks, function(key, value) {
+      if (iconName.indexOf(key) !== -1)
+        makeSocialLink(a, value);
+    });
+  }
+
+  // layout a dashboard page
+  function layoutDashboardPage(page) {
+
+    // use a page wrapper so that free form content above the
+    // dashboard appears at the top rather than the side (as it
+    // would without the wrapper in a column orientation)
+    var wrapper = $('<div class="dashboard-page-wrapper"></div>');
+    page.wrap(wrapper);
+
+    // if there are no level2 or level3 headers synthesize a level3
+    // header to contain the (e.g. frame it, scroll container, etc.)
+    var headers = page.find('h2,h3');
+    if (headers.length === 0)
+      page.wrapInner('<div class="section level3"></div>');
+
+    // hoist up any content before level 2 or level 3 headers
+    var children = page.children();
+    children.each(function(index) {
+      if ($(this).hasClass('level2') || $(this).hasClass('level3'))
+        return false;
+      $(this).insertBefore(page);
+    });
+
+    // determine orientation and fillPage behavior for distinct media
+    var orientation, fillPage, storyboard;
+
+    // media: mobile phone
+    if (isMobilePhone()) {
+
+      // if there is a sidebar we need to ensure it's content
+      // is properly framed as an h3
+      var sidebar = page.find('.section.sidebar');
+      sidebar.removeClass('sidebar');
+      sidebar.wrapInner('<div class="section level3"></div>');
+      var h2 = sidebar.find('h2');
+      var h3 = $('<h3></h3>');
+      h3.append(h2.contents());
+      h3.insertBefore(h2);
+      h2.detach();
+
+      // wipeout h2 elements then enclose them in a single h2
+      var level2 = page.find('div.section.level2');
+      level2.each(function() {
+        level2.children('h2').remove();
+        level2.children().unwrap();
+      });
+      page.wrapInner('<div class="section level2"></div>');
+
+      // substitute mobile images
+      if (isPortrait()) {
+        var mobileFigures = $('img.mobile-figure');
+        mobileFigures.each(function() {
+          // get the src (might be base64 encoded)
+          var src = $(this).attr('src');
+
+          // find it's peer
+          var id = $(this).attr('data-mobile-figure-id');
+          var img = $('img[data-figure-id=' + id + "]");
+          img.attr('src', src)
+             .attr('width', _options.defaultFigWidthMobile)
+             .attr('height', _options.defaultFigHeightMobile);
+        });
+      }
+
+      // hoist storyboard commentary into it's own section
+      if (page.hasClass('storyboard')) {
+        var commentaryHR = page.find('div.section.level3 hr');
+        commentaryHR.each(function() {
+          var commentary = $(this).nextAll().detach();
+          var commentarySection = $('<div class="section level3"></div>');
+          commentarySection.append(commentary);
+          commentarySection.insertAfter($(this).closest('div.section.level3'));
+          $(this).remove();
+        });
+      }
+
+      // force a non full screen layout by columns
+      orientation = _options.orientation = 'columns';
+      fillPage = _options.fillPage = false;
+      storyboard = _options.storyboard = false;
+
+    // media: desktop
+    } else {
+
+      // determine orientation
+      orientation = page.attr('data-orientation');
+      if (orientation !== 'rows' && orientation != 'columns')
+        orientation = _options.orientation;
+
+      // determine storyboard mode
+      storyboard = page.hasClass('storyboard');
+
+      // fillPage based on options (force for storyboard)
+      fillPage = _options.fillPage || storyboard;
+
+      // handle sidebar
+      var sidebar = page.find('.section.level2.sidebar');
+      if (sidebar.length > 0)
+        layoutSidebar(sidebar, page);
+    }
+
+    // give it and it's parent divs height: 100% if we are in fillPage mode
+    if (fillPage) {
+      page.addClass('vertical-layout-fill');
+      page.css('height', '100%');
+      page.parents('div').css('height', '100%');
+    } else {
+      page.addClass('vertical-layout-scroll');
+    }
+
+    // perform the layout
+    if (storyboard)
+      layoutPageAsStoryboard(page);
+    else if (orientation === 'rows')
+      layoutPageByRows(page, fillPage);
+    else if (orientation === 'columns')
+      layoutPageByColumns(page, fillPage);
+  }
+
+  function layoutSidebar(sidebar, content) {
+
+    // get it out of the header hierarchy
+    sidebar = sidebar.first();
+    if (sidebar.hasClass('level1')) {
+      sidebar.removeClass('level1');
+      sidebar.children('h1').remove();
+    } else if (sidebar.hasClass('level2')) {
+      sidebar.removeClass('level2');
+      sidebar.children('h2').remove();
+    }
+
+    // determine width
+    var sidebarWidth = isTablet() ? 220 : 250;
+    var dataWidth = parseInt(sidebar.attr('data-width'));
+    if (dataWidth)
+      sidebarWidth = dataWidth;
+
+    // set the width and shift the page right to accomodate the sidebar
+    sidebar.css('width', sidebarWidth + 'px');
+    content.css('padding-left', sidebarWidth + 'px');
+
+    // wrap it's contents in a form
+    sidebar.wrapInner($('<form></form>'));
+  }
+
+  function layoutPageAsStoryboard(page) {
+
+    // create storyboard navigation
+    var nav = $('<div class="storyboard-nav"></div>');
+
+    // add navigation buttons
+    var prev = $('<button class="sbprev"><i class="fa fa-angle-left"></i></button>');
+    nav.append(prev);
+    var next= $('<button class="sbnext"><i class="fa fa-angle-right"></i></button>');
+    nav.append(next);
+
+    // add navigation frame
+    var frameList = $('<div class="sbframelist"></div>');
+    nav.append(frameList);
+    var ul = $('<ul></ul>');
+    frameList.append(ul);
+
+     // find all the level3 sections (those are the storyboard frames)
+    var frames = page.find('div.section.level3');
+    frames.each(function() {
+
+      // mark it
+      $(this).addClass('sbframe');
+
+      // divide it into chart content and (optional) commentary
+      $(this).addClass('dashboard-column-orientation');
+
+      // stuff the chart into it's own div w/ flex
+      $(this).wrapInner('<div class="sbframe-component"></div>');
+      setFlex($(this), 1);
+      var frame = $(this).children('.sbframe-component');
+
+      // extract the title from the h3
+      var li = $('<li></li>');
+      var h3 = frame.children('h3');
+      li.append(h3.contents());
+      h3.detach();
+      ul.append(li);
+
+      // extract commentary
+      var hr = frame.children('hr');
+      if (hr.length) {
+        var commentary = hr.nextAll().detach();
+        hr.remove();
+        var commentaryFrame = $('<div class="sbframe-commentary"></div>');
+        commentaryFrame.addClass('flowing-content-shim');
+        commentaryFrame.addClass('flowing-content-container');
+        commentaryFrame.append(commentary);
+        $(this).append(commentaryFrame);
+
+        // look for a data-commentary-width attribute
+        var commentaryWidth = $(this).attr('data-commentary-width');
+        if (commentaryWidth)
+          commentaryFrame.css('width', commentaryWidth + 'px');
+      }
+
+      // layout the chart (force flex)
+      var result = layoutChart(frame, true);
+
+      // ice the notes if there are none
+      if (!result.notes)
+        frame.find('.chart-notes').remove();
+
+      // set flex on chart
+      setFlex(frame, 1);
+    });
+
+    // create a div to hold all the frames
+    var frameContent = $('<div class="sbframe-content"></div>');
+    frameContent.addClass('dashboard-row-orientation');
+    frameContent.append(frames.detach());
+
+    // row orientation to stack nav and frame content
+    page.addClass('dashboard-row-orientation');
+    page.append(nav);
+    page.append(frameContent);
+    setFlex(frameContent, 1);
+
+    // initialize sly
+    var sly = new Sly(frameList, {
+    		horizontal: true,
+    		itemNav: 'basic',
+    		smart: true,
+    		activateOn: 'click',
+    		startAt: 0,
+    		scrollBy: 1,
+    		activatePageOn: 'click',
+    		speed: 200,
+    		moveBy: 600,
+    		dragHandle: true,
+    		dynamicHandle: true,
+    		clickBar: true,
+    		keyboardNavBy: 'items',
+    		next: next,
+    		prev: prev
+    	}).init();
+
+    // make first frame active
+    frames.removeClass('active');
+    frames.first().addClass('active');
+
+    // subscribe to frame changed events
+    sly.on('active', function (eventName, itemIndex) {
+      frames.removeClass('active');
+      frames.eq(itemIndex).addClass('active')
+                          .trigger('shown');
+    });
+  }
+
+  function layoutPageByRows(page, fillPage) {
+
+    // row orientation
+    page.addClass('dashboard-row-orientation');
+
+    // find all the level2 sections (those are the rows)
+    var rows = page.find('div.section.level2');
+
+    // if there are no level2 sections then treat the
+    // entire page as if it's a level 2 section
+    if (rows.length === 0) {
+      page.wrapInner('<div class="section level2"></div>');
+      rows = page.find('div.section.level2');
+    }
+
+    rows.each(function () {
+
+      // flags
+      var haveNotes = false;
+      var haveFlexHeight = true;
+
+      // remove the h2
+      $(this).children('h2').remove();
+
+      // check for a tabset
+      var isTabset = $(this).hasClass('tabset');
+      if (isTabset)
+        layoutTabset($(this));
+
+      // give it row layout semantics if it's not a tabset
+      if (!isTabset)
+        $(this).addClass('dashboard-row');
+
+      // find all of the level 3 subheads
+      var columns = $(this).find('div.section.level3');
+
+      // determine figureSizes sizes
+      var figureSizes = chartFigureSizes(columns);
+
+      // fixup the columns
+      columns.each(function(index) {
+
+        // layout the chart (force flex if we are in a tabset)
+        var result = layoutChart($(this), isTabset);
+
+        // update flexHeight state
+        if (!result.flex)
+          haveFlexHeight = false;
+
+        // update state
+        if (result.notes)
+          haveNotes = true;
+
+        // set the column flex based on the figure width
+        // (value boxes will just get the default figure width)
+        var chartWidth = figureSizes[index].width;
+        setFlex($(this), chartWidth + ' ' + chartWidth + ' 0px');
+
+      });
+
+      // remove empty chart note divs
+      if (isTabset)
+        $(this).find('.chart-notes').filter(function() {
+            return $(this).html() === "&nbsp;";
+        }).remove();
+      if (!haveNotes)
+        $(this).find('.chart-notes').remove();
+
+       // make it a flexbox row
+      if (haveFlexHeight)
+        $(this).addClass('dashboard-row-flex');
+
+      // now we can set the height on all the wrappers (based on maximum
+      // figure height + room for title and notes, or data-height on the
+      // container if specified). However, don't do this if there is
+      // no flex on any of the constituent columns
+      var flexHeight = null;
+      var dataHeight = parseInt($(this).attr('data-height'));
+      if (dataHeight)
+        flexHeight = adjustedHeight(dataHeight, columns.first());
+      else if (haveFlexHeight)
+        flexHeight = maxChartHeight(figureSizes, columns);
+      if (flexHeight) {
+        if (fillPage)
+          setFlex($(this), flexHeight + ' ' + flexHeight + ' 0px');
+        else {
+          $(this).css('height', flexHeight + 'px');
+          setFlex($(this), '0 0 ' + flexHeight + 'px');
+        }
+      }
+
+    });
+  }
+
+  function layoutPageByColumns(page, fillPage) {
+
+    // column orientation
+    page.addClass('dashboard-column-orientation');
+
+    // find all the level2 sections (those are the columns)
+    var columns = page.find('div.section.level2');
+
+    // if there are no level2 sections then treat the
+    // entire page as if it's a level 2 section
+    if (columns.length === 0) {
+      page.wrapInner('<div class="section level2"></div>');
+      columns = page.find('div.section.level2');
+    }
+
+    // layout each column
+    columns.each(function (index) {
+
+      // remove the h2
+      $(this).children('h2').remove();
+
+      // make it a flexbox column
+      $(this).addClass('dashboard-column');
+
+      // check for a tabset
+      var isTabset = $(this).hasClass('tabset');
+      if (isTabset)
+        layoutTabset($(this));
+
+      // find all the h3 elements
+      var rows = $(this).find('div.section.level3');
+
+      // get the figure sizes for the rows
+      var figureSizes = chartFigureSizes(rows);
+
+      // column flex is the max row width (or data-width if specified)
+      var flexWidth;
+      var dataWidth = parseInt($(this).attr('data-width'));
+      if (dataWidth)
+        flexWidth = dataWidth;
+      else
+        flexWidth = maxChartWidth(figureSizes);
+      setFlex($(this), flexWidth + ' ' + flexWidth + ' 0px');
+
+      // layout each chart
+      rows.each(function(index) {
+
+        // perform the layout
+        var result = layoutChart($(this), false);
+
+        // ice the notes if there are none
+        if (!result.notes)
+          $(this).find('.chart-notes').remove();
+
+        // set flex height based on figHeight, then adjust
+        if (result.flex) {
+          var chartHeight = figureSizes[index].height;
+          chartHeight = adjustedHeight(chartHeight, $(this));
+          if (fillPage)
+            setFlex($(this), chartHeight + ' ' + chartHeight + ' 0px');
+          else {
+            $(this).css('height', chartHeight + 'px');
+            setFlex($(this), chartHeight + ' ' + chartHeight + ' ' + chartHeight + 'px');
+          }
+        }
+      });
+    });
+  }
+
+  function chartFigureSizes(charts) {
+
+    // sizes
+    var figureSizes = new Array(charts.length);
+
+    // check each chart
+    charts.each(function(index) {
+
+      // start with default
+      figureSizes[index] = {
+        width: _options.defaultFigWidth,
+        height: _options.defaultFigHeight
+      };
+
+      // look for data-height or data-width then knit options
+      var dataWidth = parseInt($(this).attr('data-width'));
+      var dataHeight = parseInt($(this).attr('data-height'));
+      var knitrOptions = $(this).find('.knitr-options:first');
+      var knitrWidth, knitrHeight;
+      if (knitrOptions) {
+        knitrWidth = parseInt(knitrOptions.attr('data-fig-width'));
+        knitrHeight =  parseInt(knitrOptions.attr('data-fig-height'));
+      }
+
+      // width
+      if (dataWidth)
+        figureSizes[index].width = dataWidth;
+      else if (knitrWidth)
+        figureSizes[index].width = knitrWidth;
+
+      // height
+      if (dataHeight)
+        figureSizes[index].height = dataHeight;
+      else if (knitrHeight)
+        figureSizes[index].height = knitrHeight;
+    });
+
+    // return sizes
+    return figureSizes;
+  }
+
+  function maxChartHeight(figureSizes, charts) {
+
+    // first compute the maximum height
+    var maxHeight = _options.defaultFigHeight;
+    for (var i = 0; i<figureSizes.length; i++)
+      if (figureSizes[i].height > maxHeight)
+        maxHeight = figureSizes[i].height;
+
+    // now add offests for chart title and chart notes
+    if (charts.length)
+      maxHeight = adjustedHeight(maxHeight, charts.first());
+
+    return maxHeight;
+  }
+
+  function adjustedHeight(height, chart) {
+    if (chart.length > 0) {
+      var chartTitle = chart.find('.chart-title');
+      if (chartTitle.length)
+        height += chartTitle.first().outerHeight();
+      var chartNotes = chart.find('.chart-notes');
+      if (chartNotes.length)
+        height += chartNotes.first().outerHeight();
+    }
+    return height;
+  }
+
+  function maxChartWidth(figureSizes) {
+    var maxWidth = _options.defaultFigWidth;
+    for (var i = 0; i<figureSizes.length; i++)
+      if (figureSizes[i].width > maxWidth)
+        maxWidth = figureSizes[i].width;
+    return maxWidth;
+  }
+
+  // layout a chart
+  function layoutChart(chart, forceFlex) {
+
+    // state to return
+    var result = {
+      notes: false,
+      flex: false
+    };
+
+    // extract the title
+    var title = extractTitle(chart);
+
+    // find components that apply to this container
+    var components = componentsFind(chart);
+
+    // if it's a custom component then call it and return
+    var customComponents = componentsCustom(components);
+    if (customComponents.length) {
+      componentsLayout(customComponents, title, chart);
+      result.notes = false;
+      result.flex = forceFlex || componentsFlex(customComponents);
+      return result;
+    }
+
+    // put all the content in a chart wrapper div
+    chart.addClass('chart-wrapper');
+    chart.wrapInner('<div class="chart-stage"></div>');
+    var chartContent = chart.children('.chart-stage');
+
+    // flex the content if appropriate
+    result.flex = forceFlex || componentsFlex(components);
+    if (result.flex) {
+      // add flex classes
+      chart.addClass('chart-wrapper-flex');
+      chartContent.addClass('chart-stage-flex');
+
+      // additional shim to break out of flexbox sizing
+      chartContent.wrapInner('<div class="chart-shim"></div>');
+      chartContent = chartContent.children('.chart-shim');
+    }
+
+    // set custom data-padding attribute
+    var pad = chart.attr('data-padding');
+    if (pad) {
+      if (pad === "0")
+        chart.addClass('no-padding');
+      else {
+        pad = pad + 'px';
+        chartContent.css('left', pad)
+                    .css('top', pad)
+                    .css('right', pad)
+                    .css('bottom', pad)
+      }
+    }
+
+    // call compoents
+    componentsLayout(components, title, chartContent);
+
+    // also activate components on shiny output
+    findShinyOutput(chartContent).on('shiny:value',
+      function(event) {
+        var element = $(event.target);
+        setTimeout(function() {
+
+          // see if we opted out of flex based on our output (for shiny
+          // we can't tell what type of output we have until after the
+          // value is bound)
+          var components = componentsFind(element);
+          var flex = forceFlex || componentsFlex(components);
+          if (!flex) {
+            chart.css('height', "");
+            setFlex(chart, "");
+            chart.removeClass('chart-wrapper-flex');
+            chartContent.removeClass('chart-stage-flex');
+            chartContent.children().unwrap();
+          }
+
+          // perform layout
+          componentsLayout(components, title, element.parent());
+        }, 10);
+      });
+
+    // add the title
+    var chartTitle = $('<div class="chart-title"></div>');
+    chartTitle.append(title);
+    chart.prepend(chartTitle);
+
+    // add the notes section
+    var chartNotes = $('<div class="chart-notes"></div>');
+    chartNotes.html('&nbsp;');
+    chart.append(chartNotes);
+
+    // attempt to extract notes if we have a component
+    if (components.length)
+      result.notes = extractChartNotes(chartContent, chartNotes);
+
+    // return result
+    return result;
+  }
+
+  // build a tabset from a section div with the .tabset class
+  function layoutTabset(tabset) {
+
+    // check for fade option
+    var fade = tabset.hasClass("tabset-fade");
+    var navClass = "nav-tabs";
+
+    // determine the heading level of the tabset and tabs
+    var match = tabset.attr('class').match(/level(\d) /);
+    if (match === null)
+      return;
+    var tabsetLevel = Number(match[1]);
+    var tabLevel = tabsetLevel + 1;
+
+    // find all subheadings immediately below
+    var tabs = tabset.find("div.section.level" + tabLevel);
+    if (!tabs.length)
+      return;
+
+    // create tablist and tab-content elements
+    var tabList = $('<ul class="nav ' + navClass + '" role="tablist"></ul>');
+    $(tabs[0]).before(tabList);
+    var tabContent = $('<div class="tab-content"></div>');
+    $(tabs[0]).before(tabContent);
+
+    // build the tabset
+    tabs.each(function(i) {
+
+      // get the tab div
+      var tab = $(tabs[i]);
+
+      // get the id then sanitize it for use with bootstrap tabs
+      var id = tab.attr('id');
+
+      // sanitize the id for use with bootstrap tabs
+      id = id.replace(/[.\/?&!#<>]/g, '').replace(/\s/g, '_');
+      tab.attr('id', id);
+
+      // get the heading element within it and grab it's text
+      var heading = tab.find('h' + tabLevel + ':first');
+      var headingDom = heading.contents();
+
+      // build and append the tab list item
+      var a = $('<a role="tab" data-toggle="tab"></a>');
+      a.append(headingDom);
+      a.attr('href', '#' + id);
+      a.attr('aria-controls', id);
+      var li = $('<li role="presentation"></li>');
+      li.append(a);
+      if (i === 0)
+        li.attr('class', 'active');
+      tabList.append(li);
+
+      // set it's attributes
+      tab.attr('role', 'tabpanel');
+      tab.addClass('tab-pane');
+      tab.addClass('tabbed-pane');
+      tab.addClass('no-title');
+      if (fade)
+        tab.addClass('fade');
+      if (i === 0) {
+        tab.addClass('active');
+        if (fade)
+          tab.addClass('in');
+      }
+
+      // move it into the tab content div
+      tab.detach().appendTo(tabContent);
+    });
+
+    // add nav-tabs-custom
+    tabset.addClass('nav-tabs-custom');
+
+    // internal layout is dashboard-column with tab-content flexing
+    tabset.addClass('dashboard-column');
+    setFlex(tabContent, 1);
+  }
+
+  // one time global initialization for components
+  function componentsInit(dashboardContainer) {
+    for (var i=0; i<window.FlexDashboardComponents.length; i++) {
+      var component = window.FlexDashboardComponents[i];
+      if (component.init)
+        component.init(dashboardContainer);
+    }
+  }
+
+  // find components that apply within a container
+  function componentsFind(container) {
+
+    // look for components
+    var components = [];
+    for (var i=0; i<window.FlexDashboardComponents.length; i++) {
+      var component = window.FlexDashboardComponents[i];
+      if (component.find(container).length)
+        components.push(component);
+    }
+
+    // if there were none then use a special flowing content component
+    // that just adds a scrollbar in fillPage mode
+    if (components.length == 0) {
+      components.push({
+        find: function(container) {
+          return container;
+        },
+
+        flex: function(fillPage) {
+          return fillPage;
+        },
+
+        layout: function(title, container, element, fillPage) {
+          if (fillPage) {
+            container.addClass('flowing-content-shim');
+            container.addClass('flowing-content-container');
+          }
+        }
+      });
+    }
+
+    return components;
+  }
+
+  // if there is a custom component then pick it out
+  function componentsCustom(components) {
+    var customComponent = [];
+    for (var i=0; i<components.length; i++)
+      if (components[i].type === "custom") {
+        customComponent.push(components[i]);
+        break;
+      }
+    return customComponent;
+  }
+
+  // query all components for flex
+  function componentsFlex(components) {
+
+    // no components at all means no flex
+    if (components.length === 0)
+      return false;
+
+    // otherwise query components (assume true unless we see false)
+    var isMobile = isMobilePhone();
+    for (var i=0; i<components.length; i++)
+      if (components[i].flex && !components[i].flex(_options.fillPage))
+        return false;
+    return true;
+  }
+
+  // layout all components
+  function componentsLayout(components, title, container) {
+    var isMobile = isMobilePhone();
+    for (var i=0; i<components.length; i++) {
+      var element = components[i].find(container);
+      if (components[i].layout) {
+        // call layout (don't call other components if it returns false)
+        var result = components[i].layout(title, container, element, _options.fillPage);
+        if (result === false)
+          return;
+      }
+    }
+  }
+
+  // get a reference to the h3, discover it's inner html, and remove it
+  function extractTitle(container) {
+    var h3 = container.children('h3').first();
+    var title = '';
+    if (!container.hasClass('no-title'))
+      title = h3.contents();
+    h3.detach();
+    return title;
+  }
+
+  // extract chart notes
+  function extractChartNotes(chartContent, chartNotes) {
+    // look for a terminating blockquote or image caption
+    var blockquote = chartContent.children('blockquote:last-child');
+    var caption = chartContent.children('div.image-container')
+                              .children('p.caption');
+    if (blockquote.length) {
+      chartNotes.empty().append(blockquote.children('p:first-child').contents());
+      blockquote.remove();
+      return true;
+    } else if (caption.length) {
+      chartNotes.empty().append(caption.contents());
+      caption.remove();
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  function findShinyOutput(chartContent) {
+    return chartContent.find('.shiny-text-output, .shiny-html-output');
+  }
+
+  // safely detect rendering on a mobile phone
+  function isMobilePhone() {
+    try
+    {
+      return ! window.matchMedia("only screen and (min-width: 768px)").matches;
+    }
+    catch(e) {
+      return false;
+    }
+  }
+
+  function isFillPage() {
+    return _options.fillPage;
+  }
+
+  // detect portrait mode
+  function isPortrait() {
+    return ($(window).width() < $(window).height());
+  }
+
+  // safely detect rendering on a tablet
+  function isTablet() {
+    try
+    {
+      return window.matchMedia("only screen and (min-width: 769px) and (max-width: 992px)").matches;
+    }
+    catch(e) {
+      return false;
+    }
+  }
+
+  // test whether this is a shiny doc
+  function isShinyDoc() {
+    return (typeof(window.Shiny) !== "undefined" && !!window.Shiny.outputBindings);
+  }
+
+  // set flex using vendor specific prefixes
+  function setFlex(el, flex) {
+    el.css('-webkit-box-flex', flex)
+      .css('-webkit-flex', flex)
+      .css('-ms-flex', flex)
+      .css('flex', flex);
+  }
+
+  // support bookmarking of pages
+  function handleLocationHash() {
+
+    // restore tab/page from bookmark
+    var hash = window.decodeURIComponent(window.location.hash);
+    if (hash.length > 0)
+      $('ul.nav a[href="' + hash + '"]').tab('show');
+    FlexDashboardUtils.manageActiveNavbarMenu();
+
+    // navigate to a tab when the history changes
+    window.addEventListener("popstate", function(e) {
+      var hash = window.decodeURIComponent(window.location.hash);
+      var activeTab = $('ul.nav a[href="' + hash + '"]');
+      if (activeTab.length) {
+        activeTab.tab('show');
+      } else {
+        $('ul.nav a:first').tab('show');
+      }
+      FlexDashboardUtils.manageActiveNavbarMenu();
+    });
+
+    // add a hash to the URL when the user clicks on a tab/page
+    $('.navbar-nav a[data-toggle="tab"]').on('click', function(e) {
+      var baseUrl = FlexDashboardUtils.urlWithoutHash(window.location.href);
+      var hash = FlexDashboardUtils.urlHash($(this).attr('href'));
+      var href = baseUrl + hash;
+      FlexDashboardUtils.setLocation(href);
+    });
+
+    // handle clicks of other links that should activate pages
+    var navPages = $('ul.navbar-nav li a[data-toggle=tab]');
+    navPages.each(function() {
+      var href =  $(this).attr('href');
+      var links = $('a[href="' + href + '"][data-toggle!=tab]');
+      links.each(function() {
+        $(this).on('click', function(e) {
+          window.FlexDashboardUtils.showPage(href);
+        });
+      });
+    });
+  }
+
+  // tweak Prism highlighting
+  function initPrismHighlighting() {
+
+    if (window.Prism) {
+      Prism.languages.insertBefore('r', 'comment', {
+        'heading': [
+          {
+            // title 1
+        	  // =======
+
+        	  // title 2
+        	  // -------
+        	  pattern: /\w+.*(?:\r?\n|\r)(?:====+|----+)/,
+            alias: 'operator'
+          },
+          {
+            // ### title 3
+            pattern: /(^\s*)###[^#].+/m,
+            lookbehind: true,
+            alias: 'operator'
+          }
+        ]
+      });
+
+      // prism highlight
+      Prism.highlightAll();
+    }
+  }
+
+
+  // get theme color
+  var themeColors = {
+    bootstrap: {
+      primary: "rgba(51, 122, 183, 0.4)",
+      info: "rgb(217, 237, 247)",
+      success: "rgb(223, 240, 216)",
+      warning: "rgb(252, 248, 227)",
+      danger: "rgb(242, 222, 222)"
+    },
+    cerulean: {
+      primary: "rgb(47, 164, 231)",
+      info: "rgb(217, 237, 247)",
+      success: "rgb(223, 240, 216)",
+      warning: "rgb(252, 248, 227)",
+      danger: "rgb(242, 222, 222)"
+    },
+    journal: {
+      primary: "rgba(235, 104, 100, 0.70)",
+      info: "rgb(217, 237, 247)",
+      success: "rgb(223, 240, 216)",
+      warning: "rgb(252, 248, 227)",
+      danger: "rgb(242, 222, 222)"
+    },
+    flatly: {
+      primary: "rgba(44, 62, 80, 0.70)",
+      info: "rgba(52, 152, 219, 0.70)",
+      success: "rgba(24, 188, 156, 0.70)",
+      warning: "rgba(243, 156, 18, 0.70)",
+      danger: "rgba(231, 76, 60, 0.70)"
+    },
+    readable: {
+      primary: "rgba(69, 130, 236, 0.4)",
+      info: "rgb(217, 237, 247)",
+      success: "rgb(223, 240, 216)",
+      warning: "rgb(252, 248, 227)",
+      danger: "rgb(242, 222, 222)"
+    },
+    spacelab: {
+      primary: "rgba(68, 110, 155, 0.25)",
+      info: "rgb(217, 237, 247)",
+      success: "rgb(223, 240, 216)",
+      warning: "rgb(252, 248, 227)",
+      danger: "rgb(242, 222, 222)"
+    },
+    united: {
+      primary: "rgba(221, 72, 20, 0.30)",
+      info: "rgb(217, 237, 247)",
+      success: "rgb(223, 240, 216)",
+      warning: "rgb(252, 248, 227)",
+      danger: "rgb(242, 222, 222)"
+    },
+    cosmo: {
+      primary: "rgba(39, 128, 227, 0.7)",
+      info: "rgba(153, 84, 187, 0.7)",
+      success: "rgba(63, 182, 24, 0.7)",
+      warning: "rgba(255, 117, 24, 0.7)",
+      danger: "rgba(255, 0, 57, 0.7)"
+    },
+    lumen: {
+      primary: "rgba(21, 140, 186, 0.70)",
+      info: "rgba(117, 202, 235, 0.90)",
+      success: "rgba(40, 182, 44, 0.70)",
+      warning: "rgba(255, 133, 27, 0.70)",
+      danger: "rgba(255, 65, 54, 0.70)"
+    },
+    paper: {
+      primary: "rgba(33, 150, 243, 0.35)",
+      info: "rgb(225, 190, 231)",
+      success: "rgb(223, 240, 216)",
+      warning: "rgb(255, 224, 178)",
+      danger: "rgb(249, 189, 187)"
+    },
+    sandstone: {
+      primary: "rgba(50, 93, 136, 0.3)",
+      info: "rgb(217, 237, 247)",
+      success: "rgb(223, 240, 216)",
+      warning: "rgb(252, 248, 227)",
+      danger: "rgb(242, 222, 222)"
+    },
+    simplex: {
+      primary: "rgba(217, 35, 15, 0.25)",
+      info: "rgb(217, 237, 247)",
+      success: "rgb(223, 240, 216)",
+      warning: "rgb(252, 248, 227)",
+      danger: "rgb(242, 222, 222)"
+    },
+    yeti: {
+      primary: "rgba(0, 140, 186, 0.298039)",
+      info: "rgb(217, 237, 247)",
+      success: "rgb(223, 240, 216)",
+      warning: "rgb(252, 248, 227)",
+      danger: "rgb(242, 222, 222)"
+    }
+  }
+  function themeColor(color) {
+    return themeColors[_options.theme][color];
+  }
+
+  FlexDashboard.prototype = {
+    constructor: FlexDashboard,
+    init: init,
+    isMobilePhone: isMobilePhone,
+    isFillPage: isFillPage,
+    themeColor: themeColor
+  };
+
+  return FlexDashboard;
+
+})();
+
+// utils
+window.FlexDashboardUtils = {
+  resizableImage: function(img) {
+    var src = img.attr('src');
+    var url = 'url("' + src + '")';
+    img.parent().css('background', url)
+                .css('background-size', 'contain')
+                .css('background-repeat', 'no-repeat')
+                .css('background-position', 'center')
+                .addClass('image-container');
+  },
+  setLocation: function(href) {
+    if (history && history.pushState) {
+      history.pushState(null, null, href);
+    } else {
+      window.location.replace(href);
+    }
+    setTimeout(function() {
+        window.scrollTo(0, 0);
+    }, 10);
+    this.manageActiveNavbarMenu();
+  },
+  showPage: function(href) {
+    $('ul.navbar-nav li a[href="' + href + '"]').tab('show');
+    var baseUrl = this.urlWithoutHash(window.location.href);
+    var loc = baseUrl + href;
+    this.setLocation(loc);
+  },
+  showLinkedValue: function(href) {
+    // check for a page link
+    if ($('ul.navbar-nav li a[data-toggle=tab][href="' + href + '"]').length > 0)
+      this.showPage(href);
+    else
+      window.open(href);
+  },
+  urlWithoutHash: function(url) {
+    var hashLoc = url.indexOf('#');
+    if (hashLoc != -1)
+      return url.substring(0, hashLoc);
+    else
+      return url;
+  },
+  urlHash: function(url) {
+    var hashLoc = url.indexOf('#');
+    if (hashLoc != -1)
+      return url.substring(hashLoc);
+    else
+      return "";
+  },
+  manageActiveNavbarMenu: function () {
+    // remove active from anyone currently active
+    $('.navbar ul.nav').find('li').removeClass('active');
+    // find the active tab
+    var activeTab = $('.dashboard-page-wrapper.tab-pane.active');
+    if (activeTab.length > 0) {
+      var tabId = activeTab.attr('id');
+      if (tabId)
+        $(".navbar ul.nav a[href='#" + tabId + "']").parents('li').addClass('active');
+    }
+  }
+};
+
+window.FlexDashboard = new FlexDashboard();
+
+// empty content
+window.FlexDashboardComponents.push({
+  find: function(container) {
+    if (container.find('p').length == 0)
+      return container;
+    else
+      return $();
+  }
+})
+
+// plot image
+window.FlexDashboardComponents.push({
+
+  find: function(container) {
+    return container.children('p')
+                    .children('img:only-child');
+  },
+
+  layout: function(title, container, element, fillPage) {
+    FlexDashboardUtils.resizableImage(element);
+  }
+});
+
+// plot image (figure style)
+window.FlexDashboardComponents.push({
+
+  find: function(container) {
+    return container.children('div.figure').children('img');
+  },
+
+  layout: function(title, container, element, fillPage) {
+    FlexDashboardUtils.resizableImage(element);
+  }
+});
+
+// htmlwidget
+window.FlexDashboardComponents.push({
+
+  init: function(dashboardContainer) {
+    // trigger "shown" after initial layout to force static htmlwidgets
+    // in runtime: shiny to be resized after the dom has been transformed
+    dashboardContainer.on('flexdashboard:layoutcomplete', function(event) {
+      setTimeout(function() {
+        dashboardContainer.trigger('shown');
+      }, 200);
+    });
+  },
+
+  find: function(container) {
+    return container.children('div[id^="htmlwidget-"],div.html-widget');
+  }
+});
+
+// gauge
+window.FlexDashboardComponents.push({
+
+  find: function(container) {
+    return container.children('div.html-widget.gauge');
+  },
+
+  flex: function(fillPage) {
+    return false;
+  },
+
+  layout: function(title, container, element, fillPage) {
+
+
+  }
+
+});
+
+// shiny output
+window.FlexDashboardComponents.push({
+  find: function(container) {
+    return container.children('div[class^="shiny-"]');
+  }
+});
+
+// datatables
+window.FlexDashboardComponents.push({
+  find: function(container) {
+    return container.find('.datatables');
+  },
+  flex: function(fillPage) {
+    return fillPage;
+  }
+});
+
+// bootstrap table
+window.FlexDashboardComponents.push({
+
+  find: function(container) {
+    var bsTable = container.find('table.table');
+    if (bsTable.length !== 0)
+      return bsTable;
+    else
+      return container.find('tr.header').parent('thead').parent('table');
+  },
+
+  flex: function(fillPage) {
+    return fillPage;
+  },
+
+  layout: function(title, container, element, fillPage) {
+
+    // alias variables
+    var bsTable = element;
+
+    // fixup xtable generated tables with a proper thead
+    var headerRow = bsTable.find('tbody > tr:first-child > th').parent();
+    if (headerRow.length > 0) {
+      var thead = $('<thead></thead>');
+      bsTable.prepend(thead);
+      headerRow.detach().appendTo(thead);
+    }
+
+    // improve appearance
+    container.addClass('bootstrap-table');
+
+    // for fill page provide scrolling w/ sticky headers
+    if (fillPage) {
+      // force scrollbar on overflow
+      container.addClass('flowing-content-shim');
+
+      // stable table headers when scrolling
+      bsTable.stickyTableHeaders({
+        scrollableArea: container
+      });
+    }
+  }
+});
+
+// embedded shiny app
+window.FlexDashboardComponents.push({
+
+  find: function(container) {
+    return container.find('iframe.shiny-frame');
+  },
+
+  flex: function(fillPage) {
+    return fillPage;
+  },
+
+  layout: function(title, container, element, fillPage) {
+    if (fillPage) {
+      element.attr('height', '100%');
+    } else {
+      // provide default height if necessary
+      var height = element.get(0).style.height;
+      if (!height)
+        height = element.attr('height');
+      if (!height)
+        element.attr('height', 500);
+    }
+  }
+});
+
+// shiny fillRow or fillCol
+window.FlexDashboardComponents.push({
+
+  find: function(container) {
+    return container.find('.flexfill-container');
+  },
+
+  flex: function(fillPage) {
+    return fillPage;
+  },
+
+  layout: function(title, container, element, fillPage) {
+    if (fillPage)
+      element.css('height', '100%');
+    else {
+      // provide default height if necessary
+      var height = element.get(0).style.height;
+      if (height === "100%" || height === "auto" || height === "initial" ||
+          height === "inherit" || !height) {
+        element.css('height', 500);
+      }
+    }
+  }
+});
+
+// valueBox
+window.FlexDashboardComponents.push({
+
+  type: "custom",
+
+  find: function(container) {
+    if (container.find('span.value-output, .shiny-valuebox-output').length)
+      return container;
+    else
+      return $();
+  },
+
+  flex: function(fillPage) {
+    return false;
+  },
+
+  layout: function(title, container, element, fillPage) {
+
+    // alias variables
+    var chartTitle = title;
+    var valueBox = element;
+
+    // add value-box class to container
+    container.addClass('value-box');
+
+    // value paragraph
+    var value = $('<p class="value"></p>');
+
+    // if we have shiny-text-output then just move it in
+    var valueOutputSpan = [];
+    var shinyOutput = valueBox.find('.shiny-valuebox-output').detach();
+    if (shinyOutput.length) {
+      valueBox.children().remove();
+      shinyOutput.html("&mdash;");
+      value.append(shinyOutput);
+    } else {
+      // extract the value (remove leading vector index)
+      var chartValue = valueBox.text().trim();
+      chartValue = chartValue.replace("[1] ", "");
+      valueOutputSpan = valueBox.find('span.value-output').detach();
+      valueBox.children().remove();
+      value.text(chartValue);
+    }
+
+    // caption
+    var caption = $('<p class="caption"></p>');
+    caption.append(chartTitle);
+
+    // build inner div for value box and add it
+    var inner = $('<div class="inner"></div>');
+    inner.append(value);
+    inner.append(caption);
+    valueBox.append(inner);
+
+    // add icon if specified
+    var icon = $('<div class="icon"><i></i></div>');
+    valueBox.append(icon);
+    function setIcon(chartIcon) {
+      var iconLib = "";
+      var iconSplit = chartIcon.split(" ");
+      if (iconSplit.length > 1) {
+        iconLib = iconSplit[0];
+        chartIcon = iconSplit.slice(1).join(" ");
+      } else {
+        var components = chartIcon.split("-");
+        if (components.length > 1)
+          iconLib = components[0];
+      }
+      icon.children('i').attr('class', iconLib + ' ' + chartIcon);
+    }
+    var chartIcon = valueBox.attr('data-icon');
+    if (chartIcon)
+      setIcon(chartIcon);
+
+    // set color based on data-background if necessary
+    var dataBackground = valueBox.attr('data-background');
+    if (dataBackground)
+      valueBox.css('background-color', bgColor);
+    else {
+      // default to bg-primary if no other background is specified
+      if (!valueBox.hasClass('bg-primary') &&
+          !valueBox.hasClass('bg-info') &&
+          !valueBox.hasClass('bg-warning') &&
+          !valueBox.hasClass('bg-success') &&
+          !valueBox.hasClass('bg-danger')) {
+        valueBox.addClass('bg-primary');
+      }
+    }
+
+    // handle data attributes in valueOutputSpan
+    function handleValueOutput(valueOutput) {
+
+      // caption
+      var dataCaption = valueOutput.attr('data-caption');
+      if (dataCaption)
+        caption.html(dataCaption);
+
+      // icon
+      var dataIcon = valueOutput.attr('data-icon');
+      if (dataIcon)
+        setIcon(dataIcon);
+
+      // color
+      var dataColor = valueOutput.attr('data-color');
+      if (dataColor) {
+        if (dataColor.indexOf('bg-') === 0) {
+          valueBox.css('background-color', '');
+          if (!valueBox.hasClass(dataColor)) {
+             valueBox.removeClass('bg-primary bg-info bg-warning bg-danger bg-success');
+             valueBox.addClass(dataColor);
+          }
+        } else {
+          valueBox.removeClass('bg-primary bg-info bg-warning bg-danger bg-success');
+          valueBox.css('background-color', dataColor);
+        }
+      }
+
+      // url
+      var dataHref = valueOutput.attr('data-href');
+      if (dataHref) {
+        valueBox.addClass('linked-value');
+        valueBox.off('click.value-box');
+        valueBox.on('click.value-box', function(e) {
+          window.FlexDashboardUtils.showLinkedValue(dataHref);
+        });
+      }
+    }
+
+    // check for a valueOutputSpan
+    if (valueOutputSpan.length > 0) {
+      handleValueOutput(valueOutputSpan);
+    }
+
+    // if we have a shinyOutput then bind a listener to handle
+    // new valueOutputSpan values
+    shinyOutput.on('shiny:value',
+      function(event) {
+        var element = $(event.target);
+        setTimeout(function() {
+          var valueOutputSpan = element.find('span.value-output');
+          if (valueOutputSpan.length > 0)
+            handleValueOutput(valueOutputSpan);
+        }, 10);
+      }
+    );
+  }
+});
+</script>
+
+<div id="dashboard-container">
+
+<div id="column" class="section level2" data-width="200">
+<h2 data-width="200">Column</h2>
+<div id="objetivo-1" class="section level3">
+<h3>Objetivo 1</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<table class="gmisc_table" style="border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;">
+<thead>
+<tr>
+<th style="font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+Rota
+</th>
+<th style="font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+Area
+</th>
+<th style="font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+Comp
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 100; border-right: 1px solid black; text-align: center;">
+1
+</td>
+<td style="width: 100; border-right: 1px solid black; text-align: center;">
+19.3
+</td>
+<td style="width: 100; text-align: center;">
+38.8
+</td>
+</tr>
+<tr>
+<td style="width: 100; border-right: 1px solid black; text-align: center;">
+2
+</td>
+<td style="width: 100; border-right: 1px solid black; text-align: center;">
+19.3
+</td>
+<td style="width: 100; text-align: center;">
+39.4
+</td>
+</tr>
+<tr>
+<td style="width: 100; border-bottom: 2px solid grey; border-right: 1px solid black; text-align: center;">
+3
+</td>
+<td style="width: 100; border-bottom: 2px solid grey; border-right: 1px solid black; text-align: center;">
+24.2
+</td>
+<td style="width: 100; border-bottom: 2px solid grey; text-align: center;">
+44.1
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="objetivo-2" class="section level3">
+<h3>Objetivo 2</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<table class="gmisc_table" style="border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;">
+<thead>
+<tr>
+<th style="font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+Rota
+</th>
+<th style="font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+Area
+</th>
+<th style="font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+Comp
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 100; border-right: 1px solid black; text-align: center;">
+1
+</td>
+<td style="width: 100; border-right: 1px solid black; text-align: center;">
+19.3
+</td>
+<td style="width: 100; text-align: center;">
+38.8
+</td>
+</tr>
+<tr>
+<td style="width: 100; border-bottom: 2px solid grey; border-right: 1px solid black; text-align: center;">
+2
+</td>
+<td style="width: 100; border-bottom: 2px solid grey; border-right: 1px solid black; text-align: center;">
+19.3
+</td>
+<td style="width: 100; border-bottom: 2px solid grey; text-align: center;">
+39.4
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="objetivo-3" class="section level3">
+<h3>Objetivo 3</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<table class="gmisc_table" style="border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;">
+<thead>
+<tr>
+<th style="font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+Rota
+</th>
+<th style="font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+Area
+</th>
+<th style="font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;">
+Comp
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 100; border-right: 1px solid black; text-align: center;">
+1
+</td>
+<td style="width: 100; border-right: 1px solid black; text-align: center;">
+8.4
+</td>
+<td style="width: 100; text-align: center;">
+0
+</td>
+</tr>
+<tr>
+<td style="width: 100; border-bottom: 2px solid grey; border-right: 1px solid black; text-align: center;">
+2
+</td>
+<td style="width: 100; border-bottom: 2px solid grey; border-right: 1px solid black; text-align: center;">
+9.4
+</td>
+<td style="width: 100; border-bottom: 2px solid grey; text-align: center;">
+0
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="column-1" class="section level2" data-width="800">
+<h2 data-width="800">Column</h2>
+<div id="mapa" class="section level3">
+<h3>Mapa</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div id="htmlwidget-028daea0ce142be42817" style="width:576px;height:460.8px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-028daea0ce142be42817">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["Esri.WorldImagery",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addScaleBar","args":[{"maxWidth":100,"metric":true,"imperial":true,"updateWhenIdle":true,"position":"bottomleft"}]},{"method":"addPolygons","args":[[[[{"lng":[-47.9481434,-47.948532,-47.9488628,-47.9493548,-47.9496359,-47.949884,-47.9502313,-47.9504793,-47.9506282,-47.9505786,-47.9506116,-47.9508928,-47.9511657,-47.951422,-47.951422,-47.9513393,-47.951422,-47.9515543,-47.9516701,-47.9518106,-47.9519264,-47.9519133,-47.9520326,-47.9520711,-47.9522282,-47.9523357,-47.952435,-47.9524432,-47.9525425,-47.9525425,-47.9527368,-47.9528195,-47.9527781,-47.9528029,-47.9530179,-47.9530923,-47.9532743,-47.9532081,-47.9530758,-47.9532246,-47.9533652,-47.9534975,-47.9535637,-47.9536794,-47.9535802,-47.9539358,-47.9539632,-47.9539399,-47.9540309,-47.9542293,-47.9543864,-47.9547258,-47.9511457,-47.9509452,-47.9506407,-47.9501208,-47.9500084,-47.9496992,-47.9493901,-47.9489966,-47.9487858,-47.948561,-47.9483924,-47.9481641,-47.9477453,-47.9473525,-47.9469731,-47.9471277,-47.9465685,-47.9458165,-47.9451949,-47.9445991,-47.9439039,-47.9441687,-47.9437715,-47.9424804,-47.9403287,-47.9390455,-47.9389914,-47.9385749,-47.9382991,-47.9382206,-47.9381665,-47.9380502,-47.9379745,-47.937677,-47.9374525,-47.937347,-47.9371685,-47.9369954,-47.9367439,-47.9366006,-47.9365492,-47.9362625,-47.9361543,-47.9361002,-47.9360542,-47.936084,-47.9359001,-47.9357378,-47.9355755,-47.9353294,-47.9350238,-47.9348128,-47.9346722,-47.9343638,-47.934207,-47.9341502,-47.9339635,-47.9338121,-47.9336741,-47.9335714,-47.9333117,-47.9331494,-47.9329682,-47.9328195,-47.9326247,-47.9324679,-47.9323759,-47.932265,-47.9321055,-47.9318593,-47.9316565,-47.9312373,-47.9309668,-47.9306936,-47.9306909,-47.9306936,-47.930672,-47.9306017,-47.9304773,-47.9301094,-47.9297849,-47.9293873,-47.928941,-47.928346,-47.9279593,-47.9276293,-47.9273129,-47.9269423,-47.9267638,-47.9265177,-47.9264203,-47.926277,-47.9261526,-47.9261012,-47.926039,-47.9259876,-47.9260444,-47.9259227,-47.9256576,-47.9252925,-47.9249084,-47.9243567,-47.923924,-47.9238618,-47.9235724,-47.9230828,-47.922761,-47.9226961,-47.9224013,-47.9219182,-47.9214005,-47.9210196,-47.920792,-47.9201672,-47.9200482,-47.9199536,-47.919794,-47.9197345,-47.9195127,-47.9193153,-47.9192179,-47.9189447,-47.9187987,-47.918723,-47.9185499,-47.9184579,-47.9178899,-47.9176195,-47.9175573,-47.9174545,-47.9174329,-47.9167783,-47.916681,-47.9166025,-47.9165511,-47.9165511,-47.9162401,-47.916186,-47.9161265,-47.9161211,-47.9159615,-47.9158858,-47.915353,-47.9147877,-47.9145659,-47.9144686,-47.914355,-47.9143442,-47.9140331,-47.9138249,-47.9136464,-47.9135111,-47.9134327,-47.9132542,-47.9132948,-47.9131217,-47.9125997,-47.9122805,-47.9118965,-47.911599,-47.9113177,-47.9112338,-47.911031,-47.9110472,-47.9109444,-47.910839,-47.9106037,-47.910601,-47.9105198,-47.910033,-47.9099843,-47.9095921,-47.9093731,-47.9090566,-47.9085563,-47.9083913,-47.9084859,-47.9083345,-47.9080938,-47.9081208,-47.9080911,-47.9079585,-47.9078558,-47.9077151,-47.9076637,-47.9077557,-47.9077449,-47.9076502,-47.9075583,-47.9075528,-47.9076123,-47.9075528,-47.9074771,-47.9074122,-47.9073311,-47.9073343,-47.9073487,-47.9074879,-47.9075637,-47.9077097,-47.9077395,-47.90814,-47.9089014,-47.9092325,-47.9095966,-47.9100435,-47.9101924,-47.9101097,-47.9095469,-47.9091662,-47.9085313,-47.9083047,-47.908102,-47.907941,-47.9079172,-47.907625,-47.9072355,-47.9069871,-47.9064266,-47.9060629,-47.905574,-47.9051627,-47.9045962,-47.9040239,-47.903759,-47.9035111,-47.9033621,-47.9031892,-47.9029014,-47.9027106,-47.9025415,-47.9022798,-47.9021937,-47.9020029,-47.9018244,-47.901689,-47.9015044,-47.9013259,-47.9011351,-47.9009381,-47.9008335,-47.9002673,-47.9001504,-47.8999657,-47.8998426,-47.8995411,-47.8993195,-47.8991841,-47.8989441,-47.8986986,-47.8984886,-47.8983102,-47.8981194,-47.8979101,-47.8977255,-47.8975716,-47.8972482,-47.8970546,-47.8966484,-47.8963284,-47.8962115,-47.8960479,-47.895873,-47.8957437,-47.8956268,-47.8956022,-47.8954668,-47.8954852,-47.8953744,-47.895134,-47.8947046,-47.8944073,-47.8943083,-47.8941101,-47.8941431,-47.8938128,-47.8933174,-47.8925247,-47.8919302,-47.8914347,-47.890642,-47.8891557,-47.8876033,-47.8865304,-47.8854656,-47.8843517,-47.8834716,-47.8832069,-47.8827084,-47.8820878,-47.8815637,-47.8809975,-47.8804066,-47.8801358,-47.8800435,-47.8799081,-47.8796277,-47.8788618,-47.8783818,-47.8779633,-47.877157,-47.8763631,-47.8755569,-47.874806,-47.8741659,-47.8734951,-47.8727196,-47.8720549,-47.8713964,-47.8705532,-47.8699562,-47.8695993,-47.8689592,-47.8680483,-47.8671928,-47.8663251,-47.8654326,-47.8643125,-47.8635617,-47.8627185,-47.8620169,-47.8614937,-47.8611552,-47.8606013,-47.8600044,-47.8595428,-47.8590012,-47.8584103,-47.857881,-47.8571733,-47.856447,-47.8560593,-47.8555115,-47.8550069,-47.8543053,-47.8539421,-47.8532405,-47.8526374,-47.8524343,-47.8518988,-47.8516773,-47.8513819,-47.8510987,-47.8505818,-47.8500771,-47.8495232,-47.8488954,-47.84828,-47.8455043,-47.844895,-47.8439595,-47.8430794,-47.8429932,-47.8423224,-47.8415838,-47.840833,-47.8402421,-47.8397682,-47.839559,-47.8388328,-47.8385066,-47.8381804,-47.8379834,-47.8378727,-47.8378727,-47.8374972,-47.8370541,-47.8363709,-47.8362602,-47.8359894,-47.8357924,-47.835497,-47.8349,-47.834383,-47.8332356,-47.8314695,-47.8295286,-47.8275084,-47.8272622,-47.8270591,-47.8265668,-47.826056,-47.8255513,-47.8249789,-47.8244435,-47.8234341,-47.8231449,-47.822911,-47.8226894,-47.8225356,-47.8224617,-47.821994,-47.8216555,-47.8212062,-47.8207938,-47.820683,-47.8205292,-47.8205476,-47.8206215,-47.8207631,-47.8208738,-47.82096,-47.82096,-47.8208738,-47.8206523,-47.8205107,-47.8201784,-47.8199137,-47.8195814,-47.8192613,-47.8190336,-47.8188921,-47.8187197,-47.8186213,-47.8184551,-47.818332,-47.8179258,-47.8178704,-47.8178089,-47.8174497,-47.8172119,-47.8170334,-47.816738,-47.8163687,-47.8162025,-47.8159933,-47.815704,-47.8153224,-47.8149224,-47.814387,-47.8139808,-47.8138119,-47.8132915,-47.8128114,-47.8121282,-47.8117405,-47.8113048,-47.8112174,-47.8112051,-47.8111189,-47.8110266,-47.8108481,-47.8108604,-47.8107583,-47.8106332,-47.8105499,-47.8104665,-47.8103354,-47.8103057,-47.8102461,-47.8101032,-47.8099721,-47.8099304,-47.809847,-47.809853,-47.8097875,-47.8096684,-47.8096088,-47.8096148,-47.8095671,-47.8095909,-47.8095612,-47.8096148,-47.8096148,-47.8096862,-47.8097101,-47.8097696,-47.8098292,-47.8099721,-47.8101568,-47.8102351,-47.8102188,-47.8105398,-47.8112389,-47.8118344,-47.8125016,-47.8129788,-47.8133045,-47.8136742,-47.8139931,-47.8140531,-47.8141204,-47.8141738,-47.8143201,-47.8143312,-47.8146416,-47.8150109,-47.8153802,-47.8155708,-47.8155827,-47.8158745,-47.8160353,-47.8162557,-47.8164939,-47.8166399,-47.8167858,-47.8171312,-47.8174469,-47.8178162,-47.818114,-47.818178,-47.818376,-47.8187284,-47.8194822,-47.8202042,-47.822002,-47.8256192,-47.8293603,-47.8328645,-47.8329297,-47.8337673,-47.8339834,-47.8339996,-47.8343022,-47.8340591,-47.8341617,-47.834511,-47.8349484,-47.8353735,-47.8358721,-47.836444,-47.8367162,-47.8369731,-47.8374533,-47.8376613,-47.8379427,-47.8380681,-47.8382913,-47.8385635,-47.8388602,-47.8393373,-47.8399246,-47.8403222,-47.8405944,-47.8407473,-47.8408941,-47.8410348,-47.8410807,-47.8412428,-47.8415823,-47.8419799,-47.8423591,-47.8425182,-47.8426466,-47.8427078,-47.8427629,-47.8428179,-47.8427506,-47.8427506,-47.8428424,-47.8429097,-47.8429953,-47.8430075,-47.8429647,-47.8430441,-47.8430071,-47.8430122,-47.8430461,-47.8430137,-47.8429892,-47.8428791,-47.842824,-47.8428118,-47.8428668,-47.8428485,-47.8428485,-47.8428424,-47.8428485,-47.8428424,-47.8429035,-47.8428301,-47.8428057,-47.842877,-47.8428607,-47.8429035,-47.8429402,-47.8429158,-47.8429647,-47.8430748,-47.8433033,-47.8437736,-47.8451978,-47.8461612,-47.847339,-47.8488366,-47.8509862,-47.8522961,-47.8538208,-47.8547496,-47.8559253,-47.8572536,-47.8583512,-47.8591692,-47.859587,-47.8598821,-47.8601181,-47.8606599,-47.8608425,-47.861025,-47.8611966,-47.8612842,-47.8613974,-47.8615697,-47.8617332,-47.8618026,-47.8619084,-47.8625383,-47.862585,-47.8626375,-47.8627309,-47.8627134,-47.8627076,-47.8627426,-47.8627776,-47.8628477,-47.8629469,-47.8630403,-47.8631395,-47.8632621,-47.8633263,-47.8632796,-47.8632329,-47.8632271,-47.8633497,-47.8633146,-47.863303,-47.8633613,-47.8634839,-47.8634606,-47.8633847,-47.8634372,-47.8635306,-47.8635415,-47.8635805,-47.863554,-47.8636668,-47.8637058,-47.8636182,-47.8634256,-47.8634489,-47.8634723,-47.8635948,-47.863805,-47.8639042,-47.8640326,-47.8641377,-47.8643391,-47.8645551,-47.8644383,-47.8643333,-47.8643683,-47.8645989,-47.8647039,-47.8648149,-47.8648791,-47.8649617,-47.8651009,-47.865105,-47.8651476,-47.8649883,-47.8650184,-47.8651329,-47.8650967,-47.8650606,-47.8650546,-47.8650485,-47.8650787,-47.8650834,-47.8651269,-47.8651457,-47.8651811,-47.8652353,-47.8652374,-47.8652534,-47.8652492,-47.8652414,-47.8652474,-47.8652594,-47.8653076,-47.865422,-47.8654271,-47.8654374,-47.8654392,-47.8654401,-47.8654405,-47.865454,-47.865457,-47.8654591,-47.8654697,-47.8654745,-47.8654869,-47.8655129,-47.8655769,-47.8655865,-47.8656063,-47.8657113,-47.8657702,-47.8657899,-47.865811,-47.865859,-47.8659071,-47.866014,-47.8660543,-47.8661311,-47.8662271,-47.8662639,-47.8663679,-47.8664754,-47.8666597,-47.8671418,-47.8673735,-47.8677045,-47.8680521,-47.8688052,-47.86931,-47.8695997,-47.8701376,-47.8705597,-47.8710562,-47.871619,-47.8718259,-47.873215,-47.8759626,-47.8784784,-47.8817556,-47.8834108,-47.8852315,-47.8865269,-47.8870808,-47.8876043,-47.8881664,-47.8888965,-47.8896901,-47.8906049,-47.8913598,-47.892214,-47.8933988,-47.8941428,-47.8943962,-47.8949528,-47.8955425,-47.89646,-47.8970386,-47.8974244,-47.8979947,-47.8984329,-47.8988654,-47.8992705,-47.8996397,-47.9005655,-47.901089,-47.9015078,-47.9017999,-47.901731,-47.9020286,-47.9022325,-47.9024309,-47.9025852,-47.9031876,-47.9034145,-47.9035027,-47.9036846,-47.9040345,-47.9042384,-47.9044864,-47.9047068,-47.9048721,-47.9050154,-47.9051587,-47.9054397,-47.9055885,-47.9056822,-47.9059137,-47.9060349,-47.9060569,-47.9061947,-47.9062223,-47.9061727,-47.9062223,-47.9060294,-47.9060294,-47.9059798,-47.9059467,-47.9057704,-47.9055858,-47.9055362,-47.9054425,-47.9052772,-47.9052717,-47.9050623,-47.9048363,-47.9047151,-47.9046104,-47.904541,-47.9043899,-47.9042935,-47.9043431,-47.9042219,-47.9042494,-47.9039959,-47.9038031,-47.9035716,-47.9033787,-47.9031376,-47.9030756,-47.903004,-47.9027182,-47.9027182,-47.9026947,-47.9028062,-47.9027768,-47.9026009,-47.9026126,-47.9027651,-47.9028355,-47.9027006,-47.9027886,-47.9028824,-47.9029821,-47.9031757,-47.9031688,-47.9029393,-47.9032464,-47.9039207,-47.9041201,-47.904302,-47.9044134,-47.9043313,-47.9042668,-47.9041671,-47.9040263,-47.9039969,-47.9041729,-47.9043606,-47.9045073,-47.9045659,-47.9047536,-47.9052112,-47.9056103,-47.9067832,-47.9070765,-47.9077746,-47.8991361,-47.8989153,-47.8988727,-47.8984591,-47.8981862,-47.8978388,-47.8974831,-47.8971274,-47.8966725,-47.8966063,-47.8962341,-47.8960025,-47.8960038,-47.8959053,-47.8959198,-47.895622,-47.89544,-47.8952936,-47.8952899,-47.8951842,-47.8951424,-47.8949933,-47.8949644,-47.8948651,-47.8948569,-47.8946914,-47.8947163,-47.8945095,-47.8945756,-47.8946087,-47.8946832,-47.8947493,-47.8948984,-47.8949892,-47.895799,-47.8967916,-47.8981149,-47.8995706,-47.9004969,-47.9004969,-47.9002653,-47.8988758,-47.8958983,-47.8932081,-47.8927223,-47.8887522,-47.8857747,-47.8845207,-47.8841366,-47.8838474,-47.8833759,-47.8831361,-47.8829872,-47.8829794,-47.8826953,-47.8826315,-47.8825157,-47.882433,-47.8822427,-47.8821021,-47.8820039,-47.8813369,-47.8812005,-47.8809275,-47.8806298,-47.8804561,-47.8801914,-47.8799929,-47.8795875,-47.8790747,-47.8786446,-47.8784047,-47.8783014,-47.8781868,-47.8773624,-47.8766681,-47.8762127,-47.8751705,-47.8743599,-47.8735079,-47.8723168,-47.8711919,-47.8696947,-47.8682555,-47.8671719,-47.8658402,-47.8644175,-47.8634084,-47.8627826,-47.8620849,-47.861266,-47.8608656,-47.8605899,-47.8597336,-47.8597141,-47.8591154,-47.8586439,-47.8583048,-47.8579078,-47.8571434,-47.856349,-47.8566138,-47.8562496,-47.8563821,-47.8566138,-47.85668,-47.8563775,-47.8564354,-47.85627,-47.8562204,-47.8559474,-47.8555173,-47.8553436,-47.8551037,-47.8550458,-47.8549465,-47.8547728,-47.8546074,-47.8545081,-47.8544172,-47.8542021,-47.8539539,-47.8535238,-47.8531746,-47.8529988,-47.8527304,-47.852001,-47.8514845,-47.8513236,-47.8507942,-47.8500084,-47.8497272,-47.8493301,-47.8488587,-47.8485767,-47.8481952,-47.8479984,-47.8475352,-47.8468983,-47.8464599,-47.8458561,-47.8454839,-47.8448304,-47.8445574,-47.8441687,-47.8437882,-47.8437831,-47.8432815,-47.8425783,-47.8420016,-47.8415073,-47.8413424,-47.8408601,-47.8403638,-47.8398013,-47.8396365,-47.8394745,-47.8393712,-47.8389162,-47.8387591,-47.8367279,-47.8355545,-47.8345343,-47.833769,-47.833667,-47.8341772,-47.8347893,-47.8361667,-47.8368809,-47.8377481,-47.8390568,-47.8391478,-47.8392885,-47.8393464,-47.8393629,-47.8394373,-47.8394456,-47.8395283,-47.8395614,-47.839396,-47.8392057,-47.8386019,-47.8380477,-47.8378906,-47.8373446,-47.8363355,-47.8350865,-47.8335976,-47.8320756,-47.8315545,-47.8310582,-47.8303717,-47.8296355,-47.8289986,-47.8284113,-47.8281549,-47.8276504,-47.8272533,-47.8266329,-47.8262855,-47.8257975,-47.8254088,-47.8249704,-47.824532,-47.8236635,-47.8226378,-47.8218106,-47.8208428,-47.8198337,-47.818775,-47.8178485,-47.817071,-47.8159626,-47.8150031,-47.8141317,-47.8136183,-47.8136085,-47.8134315,-47.8130014,-47.8129397,-47.8126209,-47.8119525,-47.8113964,-47.8106884,-47.8101021,-47.8099905,-47.8088077,-47.8076497,-47.806715,-47.8060781,-47.8054164,-47.805102,-47.8049449,-47.8048711,-47.8048068,-47.8047993,-47.8048704,-47.8049862,-47.805069,-47.8050193,-47.8045975,-47.8039027,-47.8033071,-47.8028191,-47.8024634,-47.8022566,-47.8020995,-47.8020333,-47.8019506,-47.801934,-47.8018761,-47.801719,-47.8016037,-47.8015951,-47.8016859,-47.8018182,-47.8018596,-47.8018265,-47.8016859,-47.801719,-47.8016032,-47.8025159,-47.8039716,-47.8066845,-47.8095959,-47.8124412,-47.8136984,-47.8166202,-47.8168353,-47.8171248,-47.8172902,-47.8179106,-47.8182249,-47.8186385,-47.81911,-47.8196145,-47.8203507,-47.8210455,-47.8216741,-47.8224517,-47.8231713,-47.8234327,-47.8237338,-47.8238827,-47.8242631,-47.8246436,-47.8250489,-47.8255618,-47.8260002,-47.8265461,-47.8272575,-47.8277703,-47.8282914,-47.8286471,-47.8289433,-47.8294618,-47.8298837,-47.8304792,-47.8308949,-47.8316538,-47.8323651,-47.8324975,-47.8325968,-47.8328697,-47.8336089,-47.834127,-47.8344874,-47.8348632,-47.8352106,-47.8357151,-47.8363355,-47.8371378,-47.8377996,-47.8386019,-47.8392191,-47.8395447,-47.8403431,-47.8413357,-47.8422373,-47.8428328,-47.8430231,-47.8435276,-47.8442803,-47.8447766,-47.8451406,-47.8455624,-47.8460174,-47.8464144,-47.8469851,-47.8475807,-47.8479612,-47.8482011,-47.8484658,-47.8489372,-47.8491109,-47.8492929,-47.8498388,-47.8499877,-47.8501118,-47.8505171,-47.8506495,-47.8506743,-47.8507487,-47.8509886,-47.8512202,-47.8515593,-47.8517827,-47.851915,-47.8521053,-47.8523617,-47.8523865,-47.8525933,-47.852929,-47.8532509,-47.853896,-47.8545412,-47.8549962,-47.8557297,-47.8560877,-47.8571335,-47.8578604,-47.8586001,-47.8588935,-47.85897,-47.8589582,-47.8588673,-47.8589086,-47.8592229,-47.8595309,-47.8599591,-47.8601957,-47.8605298,-47.8615142,-47.8623,-47.8625943,-47.8627218,-47.8635779,-47.8638343,-47.8644547,-47.8648848,-47.8651016,-47.8653546,-47.865439,-47.8666715,-47.867669,-47.8682163,-47.8694151,-47.8710731,-47.8718383,-47.8726545,-47.8739809,-47.8753815,-47.8754807,-47.8755965,-47.8756544,-47.8756557,-47.8765316,-47.8776539,-47.8788527,-47.8797965,-47.8850923,-47.885754,-47.886788,-47.8876565,-47.8884009,-47.8890213,-47.889774,-47.8906839,-47.8911388,-47.8922224,-47.8931405,-47.8942737,-47.8949851,-47.8957874,-47.8963664,-47.8967883,-47.8970861,-47.8973094,-47.8973377,-47.8973673,-47.897541,-47.8977561,-47.8977643,-47.8977643,-47.8977724,-47.8978388,-47.8978222,-47.8978222,-47.8978967,-47.8979877,-47.8981117,-47.898211,-47.8983351,-47.8985005,-47.8986494,-47.8987321,-47.8988314,-47.899154,-47.8992367,-47.8993442,-47.8994517,-47.899642,-47.8996833,-47.8997743,-47.8999646,-47.899948,-47.9000089,-47.9003451,-47.9004526,-47.9008727,-47.9017996,-47.9029251,-47.9043154,-47.906103,-47.9071623,-47.9086166,-47.9090219,-47.9097085,-47.9105687,-47.9111891,-47.9115448,-47.9120328,-47.9126532,-47.9130585,-47.9133893,-47.9136165,-47.9137202,-47.9139601,-47.914142,-47.9143386,-47.9142393,-47.9140572,-47.9137422,-47.9136261,-47.9134188,-47.9132031,-47.9127802,-47.912689,-47.9125066,-47.9120919,-47.911727,-47.911528,-47.9113456,-47.9112295,-47.9111465,-47.9112212,-47.9110968,-47.9109226,-47.9108397,-47.9109,-47.9112642,-47.9116614,-47.9126876,-47.9144752,-47.917951,-47.9211951,-47.9233799,-47.9253661,-47.9268956,-47.9271518,-47.9273915,-47.929024,-47.9305799,-47.9311426,-47.9316392,-47.9327316,-47.9337247,-47.9346516,-47.935507,-47.9361081,-47.9368033,-47.9371674,-47.9387563,-47.9405483,-47.9408196,-47.9413214,-47.9413132,-47.941553,-47.9419333,-47.9421483,-47.9422351,-47.9422806,-47.9426139,-47.9429778,-47.9432315,-47.9435169,-47.9437897,-47.9440603,-47.9441618,-47.9442776,-47.9444761,-47.9447159,-47.9450342,-47.9454559,-47.9457205,-47.946134,-47.9463738,-47.9467045,-47.9470932,-47.9472503,-47.9481434],"lat":[-24.9798683,-24.9803231,-24.9809681,-24.9817329,-24.9821795,-24.9827748,-24.9834281,-24.9839738,-24.9840317,-24.9841227,-24.9843873,-24.9849496,-24.9856194,-24.9860245,-24.9862395,-24.9864793,-24.986529,-24.9864793,-24.9867026,-24.9871574,-24.9874055,-24.9874739,-24.9875906,-24.9878065,-24.9881042,-24.9883523,-24.9887078,-24.9889724,-24.9891295,-24.9894107,-24.9899399,-24.9900143,-24.9900805,-24.9903368,-24.9909901,-24.9910314,-24.9910645,-24.9911389,-24.9911803,-24.9918004,-24.9923834,-24.9929374,-24.9929705,-24.9931111,-24.993202,-24.9940703,-24.9940944,-24.9940992,-24.9944796,-24.9948848,-24.9951411,-24.9957956,-25.000008,-24.9999435,-24.9996267,-24.999177,-24.9987273,-24.9983058,-24.9979404,-24.9975189,-24.9971816,-24.9969427,-24.9965492,-24.9962752,-24.9956105,-24.9953408,-24.994863,-24.9945679,-24.9941519,-24.9932921,-24.991057,-24.9889715,-24.985628,-24.982715,-24.9814901,-24.9798019,-24.9776833,-24.9761611,-24.9759934,-24.9756229,-24.975393,-24.9753713,-24.9751874,-24.9751117,-24.9749278,-24.9747114,-24.9746113,-24.9744301,-24.9741786,-24.9740826,-24.9738567,-24.9738405,-24.9737404,-24.9735443,-24.9735308,-24.9735471,-24.9735254,-24.9734497,-24.973236,-24.9730764,-24.9730088,-24.972806,-24.9725382,-24.9724666,-24.9722935,-24.9720825,-24.972023,-24.9719337,-24.9718445,-24.9717011,-24.9716768,-24.971547,-24.9713631,-24.9713063,-24.9711873,-24.9710629,-24.9709574,-24.9708925,-24.9708898,-24.9707572,-24.9706247,-24.9704814,-24.9704246,-24.9703326,-24.9703353,-24.9702055,-24.970169,-24.97005,-24.9699283,-24.9698011,-24.9696903,-24.9694712,-24.9692832,-24.9690452,-24.9688072,-24.968507,-24.9683717,-24.9682284,-24.9680932,-24.9679444,-24.9679796,-24.9679093,-24.9679201,-24.9678903,-24.967912,-24.9678633,-24.9679066,-24.9678768,-24.9676929,-24.9676009,-24.9674765,-24.9673778,-24.9671722,-24.9668883,-24.9667043,-24.9667882,-24.966634,-24.9664853,-24.9664095,-24.9663149,-24.9661986,-24.9660754,-24.9658713,-24.9657342,-24.9656522,-24.9654548,-24.9654846,-24.9653953,-24.9653331,-24.9654278,-24.9653277,-24.9652952,-24.9651654,-24.9650735,-24.9650653,-24.964968,-24.9649382,-24.9648476,-24.9647286,-24.9646218,-24.9647056,-24.9646191,-24.9645244,-24.9642377,-24.9642918,-24.9642945,-24.964235,-24.9641241,-24.9640024,-24.9640511,-24.9640132,-24.9639483,-24.9638821,-24.9637577,-24.963425,-24.9631085,-24.9630436,-24.9631167,-24.963049,-24.9628922,-24.9627056,-24.9625406,-24.9625514,-24.9625081,-24.9623539,-24.9622917,-24.9621538,-24.9619969,-24.9617292,-24.9614317,-24.961172,-24.9608691,-24.9606446,-24.9606419,-24.9604472,-24.9603715,-24.9602416,-24.9602443,-24.9600442,-24.9599766,-24.9599644,-24.9594532,-24.9592585,-24.9589096,-24.9586662,-24.9582172,-24.957537,-24.9571232,-24.9569744,-24.9568013,-24.9568987,-24.9567527,-24.9566174,-24.9565092,-24.9560981,-24.9560657,-24.955971,-24.9559278,-24.9554571,-24.9553638,-24.9553503,-24.9552502,-24.9550231,-24.9547878,-24.9546444,-24.9538601,-24.9532907,-24.9527177,-24.9515356,-24.950674,-24.9500709,-24.9493393,-24.9486361,-24.9476235,-24.9463822,-24.9456373,-24.9450084,-24.9441643,-24.9432705,-24.9423436,-24.9413174,-24.9405891,-24.9401853,-24.9398693,-24.9396785,-24.9395951,-24.9394818,-24.9392135,-24.9390008,-24.9387812,-24.9383698,-24.9381969,-24.9380121,-24.9377199,-24.9374576,-24.9371237,-24.9370571,-24.9370164,-24.9369389,-24.9369329,-24.9367768,-24.9367029,-24.9365485,-24.9364383,-24.9363829,-24.9362782,-24.9362352,-24.9361244,-24.9360136,-24.935909,-24.9357982,-24.935632,-24.9355335,-24.9351643,-24.9350412,-24.9348627,-24.9346473,-24.934438,-24.9342226,-24.9340441,-24.9338718,-24.9335463,-24.9333271,-24.9330194,-24.9327055,-24.9323178,-24.9319608,-24.9316593,-24.9311586,-24.9308007,-24.930136,-24.9290897,-24.9285851,-24.9281447,-24.9274096,-24.9267326,-24.9265387,-24.9261633,-24.9259848,-24.9257448,-24.9253201,-24.9243889,-24.9231668,-24.9218456,-24.9198309,-24.9178491,-24.9164619,-24.9149095,-24.914348,-24.9142819,-24.9147113,-24.9148434,-24.9148434,-24.9148765,-24.9149756,-24.9153313,-24.9155529,-24.9158544,-24.9161375,-24.9162668,-24.9164883,-24.9167132,-24.9169376,-24.9170792,-24.9172392,-24.9173192,-24.9173869,-24.9174115,-24.9174906,-24.9177316,-24.917787,-24.9179285,-24.9180393,-24.918147,-24.9182024,-24.9181962,-24.9183255,-24.9181285,-24.9180239,-24.9177777,-24.9174423,-24.9168699,-24.9164883,-24.9162114,-24.9156698,-24.9147774,-24.9138111,-24.9127956,-24.9115616,-24.9098691,-24.9086721,-24.907515,-24.9064965,-24.9057825,-24.9052471,-24.9044532,-24.9037269,-24.9032346,-24.902576,-24.9019544,-24.9013543,-24.9007266,-24.8999203,-24.8994341,-24.8987633,-24.8982094,-24.8975385,-24.8971354,-24.8964523,-24.895963,-24.8957353,-24.8952306,-24.8949967,-24.8947998,-24.8946582,-24.8945228,-24.8944243,-24.8943566,-24.8943936,-24.8944243,-24.8946705,-24.8947505,-24.8947875,-24.8947752,-24.8947628,-24.8947444,-24.8946274,-24.8944213,-24.8942613,-24.8942428,-24.8943228,-24.894212,-24.8940212,-24.893455,-24.8935042,-24.8934612,-24.8932458,-24.8931719,-24.8929319,-24.8928642,-24.8929996,-24.8930057,-24.8928888,-24.8928088,-24.8927165,-24.8926734,-24.8921548,-24.8916631,-24.8911227,-24.8906485,-24.8904516,-24.8903039,-24.8901316,-24.8898854,-24.8897192,-24.8895038,-24.8893561,-24.8890422,-24.8888822,-24.888833,-24.8887406,-24.8887406,-24.8888145,-24.8887529,-24.888796,-24.8888453,-24.8889253,-24.8890053,-24.8890914,-24.8891838,-24.8891961,-24.8892084,-24.889233,-24.8892576,-24.8893192,-24.8893561,-24.8893253,-24.8894299,-24.8894238,-24.8894669,-24.8896392,-24.8897808,-24.8900146,-24.8900885,-24.8902239,-24.8902793,-24.8902362,-24.890347,-24.8907962,-24.8908393,-24.8910301,-24.8914054,-24.8918302,-24.892101,-24.8923657,-24.892698,-24.8929688,-24.8932581,-24.8935535,-24.8939043,-24.8942366,-24.8945628,-24.8947844,-24.8948511,-24.8950552,-24.895326,-24.895726,-24.8960522,-24.8967222,-24.8970585,-24.8974708,-24.8980371,-24.8985663,-24.8988864,-24.8994588,-24.89979,-24.8999449,-24.9001057,-24.9003856,-24.9007906,-24.9009514,-24.901285,-24.9015649,-24.9018091,-24.9020235,-24.9021545,-24.9024106,-24.9027323,-24.903179,-24.9034887,-24.9037627,-24.9039235,-24.90412,-24.9043344,-24.9045429,-24.904799,-24.9051325,-24.9053648,-24.9055911,-24.9058949,-24.9063178,-24.9067049,-24.9068578,-24.9069477,-24.9076013,-24.9079953,-24.9085026,-24.9088279,-24.9088964,-24.9088211,-24.9087053,-24.9086345,-24.9086392,-24.9086621,-24.9087255,-24.9081835,-24.9081664,-24.9080629,-24.9078842,-24.9077055,-24.9075388,-24.9073839,-24.9071218,-24.9071635,-24.907098,-24.9069372,-24.9067972,-24.9066573,-24.9064429,-24.9060974,-24.9058294,-24.9054839,-24.905417,-24.90521,-24.9049157,-24.9040859,-24.903126,-24.9022498,-24.9005515,-24.8993615,-24.89892,-24.8989209,-24.8989857,-24.8989803,-24.8987912,-24.8983535,-24.8988561,-24.8989641,-24.8989671,-24.8990558,-24.8991322,-24.8992454,-24.8993555,-24.8993937,-24.8995405,-24.8997455,-24.8998877,-24.8999702,-24.9001354,-24.900273,-24.9004566,-24.900744,-24.9010377,-24.9015117,-24.9018726,-24.9020867,-24.9023651,-24.9025119,-24.9026204,-24.9027428,-24.9028468,-24.9033728,-24.904116,-24.9049418,-24.9053486,-24.9058624,-24.9063212,-24.9067311,-24.9070981,-24.9072021,-24.9072693,-24.9073611,-24.9077771,-24.9079606,-24.9085417,-24.9093858,-24.9102535,-24.9106144,-24.9108355,-24.910989,-24.9113341,-24.9117867,-24.9122149,-24.912533,-24.9129306,-24.9134444,-24.9138512,-24.9143651,-24.9147504,-24.9150746,-24.9154661,-24.9156833,-24.91572,-24.915772,-24.9161908,-24.9165763,-24.9168516,-24.9170779,-24.917604,-24.9180964,-24.9185001,-24.9200485,-24.9213189,-24.92312,-24.9237757,-24.9244022,-24.9248063,-24.9255106,-24.925882,-24.9264585,-24.9269938,-24.9277061,-24.9285935,-24.9299057,-24.9310975,-24.9319657,-24.9327167,-24.9335064,-24.9342415,-24.934435,-24.9347344,-24.9350958,-24.9353787,-24.9356744,-24.9362215,-24.9363625,-24.9366254,-24.9368262,-24.938421,-24.9387012,-24.9388063,-24.9389464,-24.9391157,-24.9391974,-24.9393667,-24.9395185,-24.9396692,-24.9399825,-24.9403211,-24.9407005,-24.9410333,-24.9412434,-24.9413952,-24.9414667,-24.9415294,-24.9416345,-24.9417469,-24.9418272,-24.9418753,-24.9418914,-24.9421088,-24.942246,-24.9425787,-24.9429815,-24.9434304,-24.9438186,-24.9440206,-24.9442701,-24.944883,-24.9457528,-24.9463249,-24.9465817,-24.9468561,-24.9474311,-24.9481782,-24.9484059,-24.9483183,-24.9486744,-24.9491969,-24.9495996,-24.9496405,-24.9496522,-24.9497689,-24.9503556,-24.9503614,-24.9508401,-24.951202,-24.9512716,-24.9513888,-24.9514101,-24.9516281,-24.9516905,-24.9517809,-24.9518532,-24.9519315,-24.9520099,-24.9521455,-24.952281,-24.9525763,-24.952598,-24.9527962,-24.9528797,-24.9530373,-24.9532602,-24.9532783,-24.9534169,-24.9534777,-24.9535916,-24.9538266,-24.9540194,-24.9542062,-24.9550197,-24.955163,-24.9552475,-24.9553184,-24.9553539,-24.9553562,-24.9554465,-24.9555164,-24.9555643,-24.955682,-24.9557358,-24.9558104,-24.9559662,-24.9561556,-24.95624,-24.9564136,-24.956882,-24.9572353,-24.9573887,-24.9575527,-24.9578263,-24.9580999,-24.9583828,-24.9584897,-24.9586253,-24.9588282,-24.9588703,-24.9589895,-24.9591712,-24.9593581,-24.9598096,-24.9599255,-24.9601241,-24.9603227,-24.9601738,-24.9600993,-24.9599338,-24.9598096,-24.9596027,-24.9595779,-24.9591724,-24.9590979,-24.958651,-24.9580883,-24.9576579,-24.9573269,-24.9574924,-24.9575917,-24.9576696,-24.9577798,-24.9577081,-24.9576916,-24.957653,-24.9575924,-24.9578018,-24.95789,-24.9579616,-24.9580553,-24.95816,-24.9582702,-24.9585361,-24.9587565,-24.9590775,-24.9593586,-24.9596562,-24.9598738,-24.9601783,-24.9603698,-24.9605971,-24.9608892,-24.9614072,-24.9618756,-24.9623385,-24.9627132,-24.9629805,-24.9631293,-24.9633332,-24.9638292,-24.9642934,-24.9651511,-24.9653432,-24.9658337,-24.9662746,-24.9668559,-24.9672527,-24.9675889,-24.968038,-24.9684954,-24.9687434,-24.9690244,-24.9695038,-24.9702726,-24.9706969,-24.971405,-24.971923,-24.9725733,-24.9736562,-24.9744249,-24.975257,-24.9760175,-24.9765879,-24.9770673,-24.9772988,-24.9773814,-24.9779215,-24.9783775,-24.9788514,-24.9791765,-24.9793033,-24.9794741,-24.9799921,-24.98036,-24.9809055,-24.9813409,-24.9814676,-24.9817432,-24.9820642,-24.9822074,-24.9824664,-24.982753,-24.9832738,-24.9838248,-24.9844255,-24.9850895,-24.9856213,-24.9859327,-24.9862027,-24.9886862,-24.9891496,-24.9894986,-24.9897861,-24.9899796,-24.9902729,-24.9905604,-24.9907363,-24.9910003,-24.9911909,-24.9917658,-24.9921178,-24.9923113,-24.9926941,-24.9929687,-24.9942386,-24.9951771,-24.9961843,-24.9964658,-24.9967239,-24.9968823,-24.9970466,-24.996982,-24.9969116,-24.9969058,-24.9970348,-24.9972049,-24.9972284,-24.9970876,-24.9972401,-24.9974513,-24.997422,-24.9975414,-24.9976918,-24.9976038,-24.9976273,-25.0040721,-25.0038577,-25.0038164,-25.0034525,-25.0030472,-25.002675,-25.0023441,-25.0016576,-25.0012771,-25.000574,-24.9998626,-24.999234,-24.9992166,-24.9991164,-24.9990355,-24.9983407,-24.997712,-24.9974193,-24.9972857,-24.9967124,-24.9963167,-24.9961073,-24.9956607,-24.995152,-24.994788,-24.9940105,-24.9933157,-24.9923231,-24.9916614,-24.9909831,-24.9904289,-24.9899409,-24.9895906,-24.9893205,-24.9858464,-24.9833982,-24.9795936,-24.9759875,-24.9736717,-24.9716536,-24.969437,-24.9668565,-24.9648715,-24.9638066,-24.9636143,-24.963118,-24.9632504,-24.963497,-24.9636174,-24.9636662,-24.9638069,-24.9639806,-24.9642039,-24.964359,-24.9645626,-24.9645265,-24.9645099,-24.964634,-24.9647085,-24.9647581,-24.9650369,-24.965445,-24.9654777,-24.9656266,-24.9657838,-24.9660319,-24.9662883,-24.9664786,-24.9667102,-24.9670576,-24.9672644,-24.9673223,-24.9673679,-24.967385,-24.9675894,-24.9678951,-24.967984,-24.9681577,-24.9682983,-24.9682321,-24.9682652,-24.9681991,-24.9679675,-24.967587,-24.9673802,-24.9667846,-24.9659161,-24.9651634,-24.9646335,-24.9639888,-24.963112,-24.9625486,-24.9622324,-24.9610515,-24.9610255,-24.9599192,-24.9588687,-24.9579258,-24.9569001,-24.9534207,-24.9503421,-24.9467008,-24.9442511,-24.9436553,-24.9431587,-24.9421987,-24.9410518,-24.9407871,-24.9404893,-24.9403404,-24.9399847,-24.939323,-24.9389425,-24.9388102,-24.9385951,-24.938256,-24.937892,-24.9379168,-24.9380492,-24.9377349,-24.9371228,-24.9366513,-24.9360805,-24.9358229,-24.9356135,-24.9353553,-24.9348516,-24.9344934,-24.9342856,-24.9338224,-24.9333509,-24.9330532,-24.9327388,-24.9324907,-24.9324343,-24.932207,-24.9321846,-24.9319117,-24.9316056,-24.9313327,-24.9310183,-24.9308116,-24.9303401,-24.9301498,-24.9299513,-24.929637,-24.9296195,-24.9292896,-24.9287589,-24.9283054,-24.9278116,-24.9276333,-24.9272796,-24.9268081,-24.9262539,-24.926098,-24.925971,-24.92589,-24.9255674,-24.9255178,-24.9242968,-24.9228684,-24.9208278,-24.9200116,-24.9182516,-24.9160325,-24.9145276,-24.912232,-24.910727,-24.9094007,-24.908346,-24.9081805,-24.9080151,-24.9077587,-24.9067165,-24.9062202,-24.9057073,-24.9053434,-24.9047478,-24.9042267,-24.9040696,-24.9039538,-24.9038876,-24.9039207,-24.9038462,-24.9038628,-24.9040365,-24.9044749,-24.9050208,-24.905302,-24.9054675,-24.9057652,-24.9061209,-24.9065097,-24.9068323,-24.9069729,-24.9073286,-24.9076098,-24.9078745,-24.9081061,-24.9084204,-24.9087844,-24.9091979,-24.9095536,-24.9099672,-24.9105627,-24.9110177,-24.9114147,-24.9117869,-24.9121343,-24.9123742,-24.9125562,-24.9127878,-24.9128292,-24.9129483,-24.9129337,-24.9129325,-24.912978,-24.9129532,-24.9128996,-24.9129119,-24.9127201,-24.9126401,-24.9124927,-24.9122639,-24.912184,-24.9115719,-24.910935,-24.9102815,-24.9097439,-24.9093055,-24.9092062,-24.9092145,-24.9094138,-24.9093636,-24.9093568,-24.9092145,-24.90914,-24.90914,-24.9089333,-24.9085445,-24.9078249,-24.9070142,-24.9061375,-24.9053103,-24.9046651,-24.9037966,-24.9031101,-24.9026386,-24.9022664,-24.9021836,-24.9021175,-24.9021283,-24.9020037,-24.9020099,-24.9019438,-24.9018776,-24.9016212,-24.9014392,-24.9012738,-24.9008519,-24.8979239,-24.8951448,-24.8928951,-24.8917702,-24.8895867,-24.888528,-24.8874127,-24.8873134,-24.8872307,-24.8870322,-24.8872224,-24.8872473,-24.8873052,-24.8872555,-24.8871976,-24.8870736,-24.8868171,-24.8867013,-24.8866931,-24.8867841,-24.8868377,-24.8869247,-24.8870322,-24.8871811,-24.8872721,-24.8872886,-24.8873631,-24.8874623,-24.8876526,-24.8878759,-24.8880331,-24.8881902,-24.8883143,-24.8883584,-24.8885624,-24.8887113,-24.8889677,-24.8890793,-24.889555,-24.889828,-24.8898363,-24.8898776,-24.8899934,-24.8901959,-24.8902664,-24.8903709,-24.8904566,-24.8905476,-24.890713,-24.8910026,-24.8913169,-24.8914988,-24.8916808,-24.8918791,-24.8919435,-24.8921192,-24.8922929,-24.8923756,-24.8923591,-24.892235,-24.8921109,-24.8919703,-24.8919042,-24.8918545,-24.8918711,-24.8917966,-24.8916146,-24.8914327,-24.8914079,-24.8913003,-24.891259,-24.8913417,-24.8914244,-24.8915237,-24.8914988,-24.8916064,-24.8915485,-24.8915981,-24.8916891,-24.8918049,-24.8919786,-24.8920696,-24.8920861,-24.8920448,-24.8919372,-24.8918793,-24.8918959,-24.8918545,-24.8920365,-24.892235,-24.8923177,-24.8923923,-24.8924087,-24.8923922,-24.8925411,-24.8927479,-24.8928156,-24.8929997,-24.8937776,-24.8944153,-24.8950912,-24.8956141,-24.8966982,-24.8973386,-24.8976694,-24.8979093,-24.8984387,-24.8988332,-24.8993817,-24.8996662,-24.9000682,-24.9013255,-24.902285,-24.9027697,-24.9029798,-24.9041998,-24.9046631,-24.9056722,-24.9064414,-24.9068423,-24.9072128,-24.9073513,-24.9090172,-24.9101129,-24.9111224,-24.9130609,-24.9147954,-24.9153311,-24.9155351,-24.9160325,-24.9163839,-24.9163756,-24.9162819,-24.916235,-24.916233,-24.9155096,-24.9146169,-24.9136986,-24.9131119,-24.9118262,-24.9116773,-24.9115781,-24.9115533,-24.9114623,-24.9114457,-24.9114457,-24.9113961,-24.9114375,-24.9116525,-24.9119917,-24.912703,-24.9135136,-24.9143904,-24.9152341,-24.9159868,-24.9164418,-24.9168471,-24.9169239,-24.9169319,-24.9173372,-24.9177177,-24.9179658,-24.9180485,-24.9180505,-24.9187516,-24.9189415,-24.9190246,-24.9194216,-24.9199262,-24.9205465,-24.9211669,-24.9219444,-24.9227137,-24.923301,-24.9236484,-24.9241529,-24.9245169,-24.924732,-24.9250297,-24.9252365,-24.9255922,-24.9259065,-24.9261795,-24.9265021,-24.9268081,-24.9269588,-24.9275195,-24.9279579,-24.9286596,-24.9294209,-24.9302485,-24.9315726,-24.9328637,-24.9341216,-24.934997,-24.9354271,-24.9360475,-24.9368746,-24.9375198,-24.9379168,-24.9386695,-24.9396373,-24.940299,-24.9408946,-24.941382,-24.9415894,-24.9422429,-24.9427309,-24.943767,-24.9445946,-24.9453229,-24.9459253,-24.9461243,-24.9463648,-24.9466468,-24.9472687,-24.9475092,-24.9477912,-24.9485292,-24.9491263,-24.949458,-24.9500385,-24.9505112,-24.9509009,-24.9510668,-24.9511331,-24.9515975,-24.9521448,-24.9539235,-24.9551152,-24.9558766,-24.9567704,-24.9575317,-24.9585579,-24.96018,-24.9611069,-24.961802,-24.9622621,-24.9623861,-24.9624274,-24.9629524,-24.963482,-24.9636806,-24.9640117,-24.9645413,-24.9649386,-24.9655344,-24.9661371,-24.9665606,-24.9673551,-24.9677523,-24.9691758,-24.9705657,-24.9708432,-24.9712313,-24.97162,-24.9718763,-24.9722236,-24.9723642,-24.9726602,-24.972728,-24.9728029,-24.9732463,-24.9735314,-24.9738691,-24.973971,-24.9742246,-24.9745306,-24.9748449,-24.975126,-24.9754816,-24.9758206,-24.9763746,-24.9767881,-24.9771809,-24.9776687,-24.9781235,-24.978661,-24.9788843,-24.9798683]},{"lng":[-47.8179617,-47.8179617,-47.8179563,-47.8179995,-47.8180643,-47.8182264,-47.8183291,-47.8184534,-47.818448,-47.8183994,-47.8183453,-47.8182264,-47.8179995,-47.8179238,-47.8177942,-47.8177725,-47.8177239,-47.8177185,-47.8176374,-47.8176212,-47.8176266,-47.8176753,-47.8177725,-47.817859,-47.8179617],"lat":[-24.9089446,-24.9088852,-24.908842,-24.9087825,-24.9087447,-24.9086961,-24.908669,-24.9085556,-24.9084583,-24.9083881,-24.9083232,-24.9083232,-24.9084961,-24.9085502,-24.9086799,-24.9087501,-24.9087933,-24.908869,-24.9089014,-24.9089879,-24.9090797,-24.9090905,-24.9090635,-24.9090419,-24.9089446]}]],[[{"lng":[-47.966323,-47.9648003,-47.9635092,-47.961192,-47.9582458,-47.9546045,-47.9517576,-47.9506321,-47.9490101,-47.9477852,-47.9469577,-47.9449715,-47.9435408,-47.9429201,-47.9425634,-47.9425091,-47.9423738,-47.9418111,-47.9413683,-47.9411773,-47.9411132,-47.9408676,-47.9403379,-47.9397503,-47.9389144,-47.9384261,-47.9379627,-47.9372013,-47.9368785,-47.9366302,-47.9360923,-47.9353806,-47.9343378,-47.9337088,-47.9334771,-47.9327405,-47.9318467,-47.9310108,-47.9299845,-47.9292397,-47.9291073,-47.9284204,-47.9279613,-47.927497,-47.9272196,-47.9267532,-47.9264774,-47.9263348,-47.9261279,-47.9261113,-47.9262851,-47.9263785,-47.9264132,-47.9264525,-47.926406,-47.9264176,-47.9263182,-47.9261113,-47.925921,-47.9256893,-47.9253582,-47.9250768,-47.9245885,-47.9242161,-47.9236533,-47.9235306,-47.9235064,-47.9234532,-47.9232906,-47.9230931,-47.9230533,-47.9226064,-47.9224976,-47.9220633,-47.9204414,-47.9181244,-47.9180938,-47.9178622,-47.9170935,-47.9164267,-47.9159982,-47.915322,-47.9141373,-47.9132159,-47.9119655,-47.9106273,-47.9098216,-47.9097458,-47.9080733,-47.9033534,-47.8994519,-47.8949168,-47.8901169,-47.8873301,-47.886301,-47.8857297,-47.8859055,-47.8869774,-47.8871042,-47.8876993,-47.8881958,-47.8893212,-47.8906783,-47.8918699,-47.8929953,-47.8950144,-47.8975631,-47.9001449,-47.901714,-47.9033683,-47.9060483,-47.9086621,-47.9108954,-47.9120535,-47.9125828,-47.9130333,-47.9133645,-47.9136954,-47.913627,-47.9136416,-47.9133604,-47.9134265,-47.9132653,-47.9132653,-47.9131991,-47.9131329,-47.9130795,-47.9131205,-47.9129344,-47.9129344,-47.9128682,-47.9128672,-47.9128972,-47.9129054,-47.9125828,-47.9125485,-47.9127028,-47.9129592,-47.9130093,-47.9127565,-47.9125911,-47.9125249,-47.9126431,-47.9129054,-47.9130957,-47.9130461,-47.9130305,-47.9130006,-47.9136292,-47.9139029,-47.9142262,-47.914498,-47.9147319,-47.9150029,-47.915295,-47.9160258,-47.9167601,-47.917403,-47.9175957,-47.9178477,-47.9180912,-47.9182113,-47.9183299,-47.9183026,-47.9181455,-47.9181207,-47.9182199,-47.9182282,-47.9184681,-47.9186389,-47.9187079,-47.9186914,-47.9187162,-47.9183289,-47.9176342,-47.9164597,-47.9153164,-47.9151843,-47.9149692,-47.9145804,-47.9141338,-47.9140356,-47.9139166,-47.913506,-47.9132901,-47.9131743,-47.9126614,-47.9121072,-47.9114538,-47.9105191,-47.9099235,-47.9089971,-47.9083106,-47.9079714,-47.907806,-47.9073097,-47.9070119,-47.9064577,-47.9057381,-47.9047952,-47.9039101,-47.9031822,-47.9027604,-47.902322,-47.9021813,-47.9014204,-47.9011226,-47.9007007,-47.9003781,-47.8997743,-47.8995593,-47.8995014,-47.8991539,-47.8991361,-47.9077746,-47.9082724,-47.908867,-47.916296,-47.9169121,-47.9176818,-47.9184516,-47.9189717,-47.9196582,-47.9203941,-47.9209481,-47.921697,-47.9221547,-47.9229869,-47.923739,-47.925063,-47.925434,-47.9259851,-47.9261908,-47.9264098,-47.9263415,-47.9264293,-47.9262878,-47.9262576,-47.9263985,-47.9265999,-47.9265898,-47.9262138,-47.92609,-47.9259133,-47.9256818,-47.925594,-47.9254932,-47.9253035,-47.9251131,-47.9247052,-47.9242292,-47.9238416,-47.923794,-47.9234269,-47.9232433,-47.9230325,-47.9226925,-47.9224953,-47.9223865,-47.922288,-47.9222959,-47.922322,-47.9222329,-47.9221329,-47.9222329,-47.9222107,-47.9220996,-47.9222218,-47.9220663,-47.9220441,-47.9220454,-47.9219792,-47.9216813,-47.9214827,-47.9218137,-47.922542,-47.9231047,-47.9237668,-47.9248592,-47.926084,-47.9266964,-47.9270937,-47.9280206,-47.9294771,-47.9294771,-47.9287157,-47.9286164,-47.9306026,-47.9315791,-47.9321543,-47.9353322,-47.9417873,-47.9456604,-47.9471335,-47.948259,-47.9529638,-47.9584589,-47.9599817,-47.9652704,-47.9667803,-47.9679754,-47.9677851,-47.966323],"lat":[-25.0805845,-25.0810479,-25.0814948,-25.0815776,-25.0819417,-25.081081,-25.0797569,-25.0790617,-25.0785321,-25.078499,-25.0780686,-25.0779693,-25.0781889,-25.0780399,-25.0779756,-25.0779366,-25.0779489,-25.0778165,-25.0776653,-25.0776528,-25.0776473,-25.0775599,-25.0774771,-25.0773033,-25.0770551,-25.0767075,-25.076575,-25.0764261,-25.0763764,-25.0761695,-25.0760371,-25.0758054,-25.0757143,-25.0754578,-25.0754329,-25.0753998,-25.0752923,-25.0750191,-25.0746302,-25.0740674,-25.0739846,-25.0738274,-25.0736639,-25.0731845,-25.0727459,-25.072036,-25.0714826,-25.0713115,-25.0708563,-25.0704756,-25.0702438,-25.0701464,-25.0700091,-25.0696303,-25.0695112,-25.0694659,-25.0691762,-25.0691017,-25.0689279,-25.0687128,-25.0686548,-25.0686631,-25.0686052,-25.068481,-25.0684397,-25.0684058,-25.0683613,-25.0681851,-25.0679906,-25.06785,-25.0676389,-25.0674072,-25.0674953,-25.0669252,-25.0662301,-25.0657336,-25.0657409,-25.0656454,-25.0653971,-25.0649571,-25.0648113,-25.0643788,-25.0639019,-25.0636833,-25.0633256,-25.0630275,-25.0631199,-25.0631414,-25.0627113,-25.0619158,-25.0614969,-25.0613976,-25.06153,-25.0621635,-25.0607101,-25.0576775,-25.0550405,-25.0529751,-25.0530476,-25.0526839,-25.0518233,-25.0511944,-25.0509958,-25.0508965,-25.051062,-25.0511944,-25.0514923,-25.0515916,-25.051804,-25.0520025,-25.0522672,-25.0525319,-25.05278,-25.0527469,-25.0525153,-25.0524277,-25.0522134,-25.0511546,-25.050676,-25.0499015,-25.0484953,-25.0477509,-25.0471057,-25.0461255,-25.044008,-25.0418243,-25.0415486,-25.0409682,-25.0405184,-25.0403023,-25.0390451,-25.0390419,-25.0388755,-25.0384536,-25.0379739,-25.0379387,-25.0363651,-25.0350132,-25.0342394,-25.0333291,-25.0330771,-25.0326966,-25.032358,-25.0318612,-25.0314559,-25.0307859,-25.0307426,-25.029814,-25.0284905,-25.0281484,-25.0270912,-25.0262124,-25.0256493,-25.0251088,-25.0246767,-25.0238537,-25.0227825,-25.0219547,-25.0217083,-25.0210709,-25.0208979,-25.0206672,-25.0202786,-25.020219,-25.0199295,-25.0197227,-25.0191519,-25.0187384,-25.0179526,-25.01718,-25.016687,-25.0161824,-25.0157937,-25.0148938,-25.0140005,-25.0128426,-25.0119619,-25.0118812,-25.0116414,-25.0113518,-25.0111451,-25.0111242,-25.0110104,-25.0107304,-25.010657,-25.0106901,-25.0104006,-25.010169,-25.009954,-25.0096479,-25.0094411,-25.009102,-25.0089283,-25.0086967,-25.0086636,-25.0083327,-25.0083079,-25.00825,-25.0081673,-25.0077785,-25.0073567,-25.0070424,-25.0067032,-25.0063724,-25.0063641,-25.005661,-25.0055287,-25.0050737,-25.0048587,-25.0045692,-25.0044203,-25.0042631,-25.0040894,-25.0040721,-24.9976273,-24.9976609,-24.9980518,-25.0016711,-25.0022346,-25.0026923,-25.0032124,-25.0037949,-25.0043358,-25.0048492,-25.0056049,-25.0063955,-25.0068323,-25.0077685,-25.0085155,-25.0102436,-25.0108946,-25.011868,-25.0123997,-25.0130659,-25.0134365,-25.0138266,-25.0143803,-25.0159003,-25.0167962,-25.0171083,-25.0173398,-25.0175205,-25.0178224,-25.0183014,-25.0186322,-25.0188013,-25.0190534,-25.0192933,-25.0195857,-25.0199188,-25.0201772,-25.0203064,-25.0205376,-25.0207756,-25.0209524,-25.0211495,-25.0213263,-25.0214895,-25.0216595,-25.0218966,-25.0220726,-25.0226412,-25.0234553,-25.0240549,-25.0243214,-25.0247212,-25.0248877,-25.0251431,-25.026198,-25.0265533,-25.0274198,-25.0279494,-25.0296708,-25.031359,-25.0329149,-25.0340404,-25.0346031,-25.0355962,-25.0369866,-25.0391383,-25.0416707,-25.0431272,-25.0442858,-25.0463382,-25.0483575,-25.0512375,-25.0529588,-25.0544816,-25.0554581,-25.0569892,-25.0594388,-25.0611933,-25.0633781,-25.0647932,-25.0651905,-25.0654222,-25.0662167,-25.0661836,-25.0665671,-25.0668814,-25.0669155,-25.072269,-25.0805845]},{"lng":[-47.921393,-47.9209875,-47.9207807,-47.9207558,-47.920822,-47.92064,-47.9206814,-47.9206814,-47.9207254,-47.920891,-47.9210372,-47.9213544,-47.9216247,-47.921873,-47.9221129,-47.9223281,-47.9230066,-47.9233045,-47.9244961,-47.925456,-47.9252905,-47.9250919,-47.9241982,-47.9229735,-47.9220219,-47.921393],"lat":[-25.0435338,-25.0435835,-25.0439641,-25.0446096,-25.0450482,-25.0456853,-25.0462977,-25.046728,-25.0469672,-25.0468513,-25.0460991,-25.0461148,-25.0459584,-25.0464135,-25.047299,-25.047903,-25.0494091,-25.050369,-25.0516599,-25.0504021,-25.0491112,-25.0473569,-25.0457681,-25.0442786,-25.0430373,-25.0435338]}]],[[{"lng":[-47.955341,-47.9567314,-47.9579231,-47.9587507,-47.9592472,-47.9606044,-47.9637161,-47.9673233,-47.9675052,-47.9682163,-47.9689233,-47.9696097,-47.9703291,-47.9704481,-47.9705346,-47.9710948,-47.9714569,-47.9717857,-47.9717885,-47.9722268,-47.9725906,-47.9730454,-47.973525,-47.9738806,-47.9740625,-47.9740962,-47.9747034,-47.975183,-47.9756708,-47.975985,-47.9762414,-47.9764812,-47.9765639,-47.9766796,-47.9774388,-47.977538,-47.9776536,-47.9777114,-47.9776536,-47.9779855,-47.9784699,-47.9790569,-47.9795527,-47.9800144,-47.9801511,-47.980248,-47.9806298,-47.9807609,-47.9811616,-47.9813565,-47.9814363,-47.9815331,-47.9815958,-47.9818124,-47.9821201,-47.9826387,-47.9829351,-47.983032,-47.9832571,-47.9840606,-47.9843228,-47.9844944,-47.9847071,-47.9853965,-47.9866537,-47.9892012,-47.9904914,-47.9921126,-47.9937006,-47.9952555,-47.9964797,-47.998564,-47.9996011,-47.9999535,-48.0020744,-48.0049823,-48.0066365,-48.0079598,-48.0091839,-48.0103088,-48.0113013,-48.012054,-48.0129886,-48.0146428,-48.0168925,-48.019043,-48.0213258,-48.0232116,-48.0239394,-48.0249981,-48.0260568,-48.0266854,-48.0277772,-48.0276118,-48.0273843,-48.0272272,-48.0271445,-48.0274133,-48.0278103,-48.0283065,-48.0287697,-48.0295307,-48.0300269,-48.0304239,-48.0317142,-48.0310525,-48.0290013,-48.0274794,-48.0263546,-48.0260742,-48.0255446,-48.0242536,-48.0228632,-48.0218862,-48.0210757,-48.0196191,-48.0184936,-48.018152,-48.0167391,-48.0155805,-48.0143557,-48.0133626,-48.0119723,-48.0107806,-48.0097213,-48.0095557,-48.0095738,-48.0098206,-48.0079668,-48.0058813,-48.0047227,-48.0028689,-48.0002562,-47.9970495,-47.9951739,-47.9926069,-47.9904221,-47.9884028,-47.9864828,-47.9845629,-47.9818484,-47.9779753,-47.9748636,-47.9728609,-47.9700968,-47.9682761,-47.966323,-47.9677851,-47.9679754,-47.9688626,-47.9696252,-47.9700919,-47.9706041,-47.9710139,-47.9722015,-47.9757929,-47.9792187,-47.9812378,-47.9831907,-47.9849616,-47.9868317,-47.9883543,-47.9896121,-47.9921939,-47.9935345,-47.9948585,-47.9966459,-47.9988305,-48.0001545,-48.0017267,-48.0036134,-48.0056491,-48.0065285,-48.0075246,-48.0076847,-48.009439,-48.0109782,-48.0134772,-48.0157755,-48.0170158,-48.0178326,-48.0184074,-48.0185889,-48.0184982,-48.0180141,-48.0168646,-48.0157301,-48.0152158,-48.0143839,-48.0133856,-48.012236,-48.0112639,-48.0097403,-48.0087574,-48.0076492,-48.0067178,-48.0058578,-48.0051697,-48.0038182,-48.001577,-48.0011347,-48.0007415,-48.000134,-47.9993163,-47.9985299,-47.9974757,-47.9972113,-47.9970144,-47.9966675,-47.9963506,-47.9960862,-47.9957645,-47.9957599,-47.9955068,-47.9953605,-47.9952874,-47.9950736,-47.9947192,-47.9941398,-47.9937798,-47.9934479,-47.993116,-47.9926547,-47.9918642,-47.990395,-47.9887298,-47.9884744,-47.988371,-47.9879844,-47.9875979,-47.9870753,-47.986569,-47.985502,-47.9850533,-47.9843038,-47.9834925,-47.9831642,-47.9826426,-47.9820857,-47.9817376,-47.9815172,-47.981494,-47.9812968,-47.9807051,-47.9803802,-47.980067,-47.9795333,-47.9781875,-47.9772594,-47.9765501,-47.9757743,-47.9754611,-47.9750434,-47.9745329,-47.9740109,-47.9737668,-47.9734636,-47.973338,-47.9730631,-47.9728733,-47.9724686,-47.9724206,-47.9721449,-47.9716534,-47.9705862,-47.9698191,-47.9693636,-47.9685723,-47.9680568,-47.9677811,-47.9673016,-47.9669659,-47.9665822,-47.9605849,-47.960309,-47.9600041,-47.9598153,-47.9594951,-47.9590167,-47.9587408,-47.9584649,-47.9582471,-47.9579276,-47.9578695,-47.9573622,-47.9568821,-47.9567336,-47.9565812,-47.9564901,-47.9564238,-47.9563942,-47.9560835,-47.9558947,-47.9558367,-47.9557495,-47.9554368,-47.955083,-47.9547036,-47.9546274,-47.9542181,-47.9540419,-47.9535132,-47.9530601,-47.9528651,-47.9524528,-47.9517742,-47.9511456,-47.9547258,-47.955341],"lat":[-24.9969824,-24.9982735,-24.9994321,-25.0001603,-25.0006238,-25.0022127,-25.0041327,-25.0053368,-25.0055683,-25.0062216,-25.0069037,-25.0074826,-25.0081606,-25.0081755,-25.0082634,-25.0087209,-25.0090199,-25.0094625,-25.0095085,-25.010079,-25.0105504,-25.0110713,-25.0115675,-25.0118321,-25.0119396,-25.0119396,-25.0124109,-25.0127995,-25.0132047,-25.0135189,-25.0137587,-25.0142466,-25.0144699,-25.0146518,-25.0152835,-25.0152669,-25.0152339,-25.015333,-25.0154817,-25.0158591,-25.0163549,-25.0168451,-25.0172611,-25.0176201,-25.0176885,-25.0176486,-25.0180419,-25.0181843,-25.0184713,-25.0185747,-25.0185291,-25.0185747,-25.018683,-25.0187742,-25.0189337,-25.0192586,-25.019327,-25.0196005,-25.0197345,-25.0200251,-25.020122,-25.0202819,-25.0203606,-25.0210571,-25.0212887,-25.0217519,-25.0225128,-25.0223805,-25.0216196,-25.0216527,-25.0222813,-25.0231084,-25.0234788,-25.0236046,-25.0236801,-25.0236708,-25.0239685,-25.0236046,-25.0239024,-25.0247956,-25.0252588,-25.0253307,-25.0253912,-25.0258874,-25.0265491,-25.0279055,-25.0288981,-25.0298575,-25.0317102,-25.0345885,-25.0367059,-25.0399812,-25.0405768,-25.0413377,-25.0418603,-25.0419554,-25.0422491,-25.0435766,-25.0450984,-25.0466865,-25.0484068,-25.0504911,-25.0535349,-25.0554868,-25.0578358,-25.0604163,-25.061872,-25.0634435,-25.0647834,-25.0665653,-25.0688825,-25.0698756,-25.0702066,-25.0703514,-25.0704715,-25.0703391,-25.0702728,-25.0702728,-25.0702728,-25.0705377,-25.0713653,-25.0729542,-25.0736825,-25.0741459,-25.0754369,-25.0766287,-25.0778435,-25.078979,-25.0805514,-25.0816107,-25.0814286,-25.0800383,-25.0789024,-25.0785393,-25.0782973,-25.0785155,-25.0784493,-25.0789128,-25.079641,-25.0800052,-25.0804024,-25.0807335,-25.0806341,-25.0807335,-25.0811803,-25.0811803,-25.0805845,-25.072269,-25.0669155,-25.0669437,-25.0668754,-25.0668071,-25.0667275,-25.0666329,-25.0668424,-25.0666604,-25.0662466,-25.0663128,-25.0662632,-25.0657998,-25.0653529,-25.0651378,-25.0651543,-25.0649557,-25.0645916,-25.0644923,-25.0649723,-25.0639296,-25.0624898,-25.0614637,-25.0593784,-25.0576572,-25.0572711,-25.0568338,-25.0567635,-25.0561511,-25.0560022,-25.055605,-25.0541562,-25.0520688,-25.0501629,-25.0476822,-25.0444755,-25.0418133,-25.0410873,-25.0389394,-25.0371091,-25.0365344,-25.0352184,-25.0344016,-25.033857,-25.0330382,-25.0320307,-25.0313918,-25.0309488,-25.0307038,-25.0305563,-25.0305317,-25.03063,-25.0305493,-25.0305739,-25.0304756,-25.0304362,-25.0303036,-25.0302053,-25.030185,-25.0302188,-25.030185,-25.0300894,-25.0300781,-25.0299881,-25.0300325,-25.0300331,-25.0301569,-25.0302356,-25.0301062,-25.0299037,-25.0297406,-25.0294762,-25.0293074,-25.029178,-25.0290599,-25.0288968,-25.0286398,-25.028152,-25.0276312,-25.0277081,-25.0275448,-25.0273869,-25.0271093,-25.0269133,-25.0267228,-25.0263145,-25.0261209,-25.0257666,-25.0254212,-25.0253254,-25.0251375,-25.0249403,-25.0250679,-25.0252419,-25.0250911,-25.0249055,-25.0246154,-25.0244646,-25.0244066,-25.0240238,-25.0235017,-25.0229796,-25.0227148,-25.0223299,-25.0220979,-25.0218658,-25.0215062,-25.0212857,-25.0212486,-25.0210345,-25.0210341,-25.0210648,-25.0209965,-25.0210225,-25.0206869,-25.0204231,-25.0202073,-25.0194608,-25.0190444,-25.0186248,-25.0180854,-25.0176897,-25.0172821,-25.0170543,-25.0165988,-25.0161432,-25.0088952,-25.0086338,-25.0083724,-25.0084014,-25.008019,-25.0077916,-25.0074866,-25.0072543,-25.007051,-25.0070162,-25.0068419,-25.0062028,-25.0058836,-25.0059112,-25.0058114,-25.0056803,-25.0055312,-25.0053596,-25.0051575,-25.0050559,-25.0048381,-25.0046348,-25.0043782,-25.0040127,-25.0039425,-25.0035949,-25.003128,-25.0028385,-25.0023351,-25.0019827,-25.0017184,-25.0010376,-25.00021,-25.000008,-24.9957956,-24.9969824]}]]],null,"Área de Estudo 1",{"interactive":true,"className":"","stroke":true,"color":["#4CB062","#98D594","#D3EECD"],"weight":2,"opacity":0.5,"fill":true,"fillColor":["#4CB062","#98D594","#D3EECD"],"fillOpacity":0.2,"smoothFactor":1,"noClip":false},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addPolygons","args":[[[[{"lng":[-47.966323,-47.9648003,-47.9635092,-47.961192,-47.9582458,-47.9546045,-47.9517576,-47.9506321,-47.9490101,-47.9477852,-47.9469577,-47.9449715,-47.9435408,-47.9429201,-47.9425634,-47.9425091,-47.9423738,-47.9418111,-47.9413683,-47.9411773,-47.9411132,-47.9408676,-47.9403379,-47.9397503,-47.9389144,-47.9384261,-47.9379627,-47.9372013,-47.9368785,-47.9366302,-47.9360923,-47.9353806,-47.9343378,-47.9337088,-47.9334771,-47.9327405,-47.9318467,-47.9310108,-47.9299845,-47.9292397,-47.9291073,-47.9284204,-47.9279613,-47.927497,-47.9272196,-47.9267532,-47.9264774,-47.9263348,-47.9261279,-47.9261113,-47.9262851,-47.9263785,-47.9264132,-47.9264525,-47.926406,-47.9264176,-47.9263182,-47.9261113,-47.925921,-47.9256893,-47.9253582,-47.9250768,-47.9245885,-47.9242161,-47.9236533,-47.9235306,-47.9235064,-47.9234532,-47.9232906,-47.9230931,-47.9230533,-47.9226064,-47.9224976,-47.9220633,-47.9204414,-47.9181244,-47.9180938,-47.9178622,-47.9170935,-47.9164267,-47.9159982,-47.915322,-47.9141373,-47.9132159,-47.9119655,-47.9106273,-47.9098216,-47.9097458,-47.9080733,-47.9033534,-47.8994519,-47.8949168,-47.8901169,-47.8873301,-47.886301,-47.8857297,-47.8859055,-47.8869777,-47.8871042,-47.8876993,-47.8881958,-47.8893212,-47.8906783,-47.8918699,-47.8929953,-47.8950144,-47.8975631,-47.9001449,-47.901714,-47.9033683,-47.9060483,-47.9086621,-47.9108954,-47.9120535,-47.9125828,-47.9130333,-47.9133645,-47.9136954,-47.913627,-47.9136416,-47.9133604,-47.9134265,-47.9132653,-47.9132653,-47.9131991,-47.9131329,-47.9130795,-47.9131205,-47.9129344,-47.9129344,-47.9128682,-47.9128672,-47.9128972,-47.9129054,-47.9125828,-47.9125485,-47.9127028,-47.9129592,-47.9130093,-47.9127565,-47.9125911,-47.9125249,-47.9126431,-47.9129054,-47.9130957,-47.9130461,-47.9130305,-47.9130006,-47.9136292,-47.9139029,-47.9142262,-47.914498,-47.9147319,-47.9150029,-47.915295,-47.9160258,-47.9167601,-47.917403,-47.9175957,-47.9178477,-47.9180912,-47.9182113,-47.9183299,-47.9183026,-47.9181455,-47.9181207,-47.9182199,-47.9182282,-47.9184681,-47.9186389,-47.9187079,-47.9186914,-47.9187162,-47.9183289,-47.9176342,-47.9164597,-47.9153164,-47.9151843,-47.9149692,-47.9145804,-47.9141338,-47.9140356,-47.9139166,-47.913506,-47.9132901,-47.9131743,-47.9126614,-47.9121072,-47.9114538,-47.9105191,-47.9099235,-47.9089971,-47.9083106,-47.9079714,-47.907806,-47.9073097,-47.9070119,-47.9064577,-47.9057381,-47.9047952,-47.9039101,-47.9031822,-47.9027604,-47.902322,-47.9021813,-47.9014204,-47.9011226,-47.9007007,-47.9003781,-47.8997743,-47.8995593,-47.8995014,-47.8991539,-47.8991361,-47.9077746,-47.9082724,-47.908867,-47.916296,-47.9169121,-47.9176818,-47.9184516,-47.9189717,-47.9196582,-47.9203941,-47.9209481,-47.921697,-47.9221547,-47.9229869,-47.923739,-47.925063,-47.925434,-47.9259851,-47.9261908,-47.9264098,-47.9263415,-47.9264293,-47.9262878,-47.9262576,-47.9263985,-47.9265999,-47.9265898,-47.9262138,-47.92609,-47.9259133,-47.9256818,-47.925594,-47.9254932,-47.9253035,-47.9251131,-47.9247052,-47.9242292,-47.9238416,-47.923794,-47.9234269,-47.9232433,-47.9230325,-47.9226925,-47.9224953,-47.9223865,-47.922288,-47.9222959,-47.922322,-47.9222329,-47.9221329,-47.9222329,-47.9222107,-47.9220996,-47.9222218,-47.9220663,-47.9220441,-47.9220454,-47.9219792,-47.9216813,-47.9214827,-47.9218137,-47.922542,-47.9231047,-47.9237668,-47.9248592,-47.926084,-47.9266964,-47.9270937,-47.9280206,-47.9294771,-47.9294771,-47.9287157,-47.9286164,-47.9306026,-47.9315791,-47.9321543,-47.9353322,-47.9417873,-47.9456604,-47.9471335,-47.948259,-47.9529638,-47.9584589,-47.9599817,-47.9652704,-47.9667803,-47.9679754,-47.9677851,-47.966323],"lat":[-25.0805845,-25.0810479,-25.0814948,-25.0815776,-25.0819417,-25.081081,-25.0797569,-25.0790617,-25.0785321,-25.078499,-25.0780686,-25.0779693,-25.0781889,-25.0780399,-25.0779756,-25.0779366,-25.0779489,-25.0778165,-25.0776653,-25.0776528,-25.0776473,-25.0775599,-25.0774771,-25.0773033,-25.0770551,-25.0767075,-25.076575,-25.0764261,-25.0763764,-25.0761695,-25.0760371,-25.0758054,-25.0757143,-25.0754578,-25.0754329,-25.0753998,-25.0752923,-25.0750191,-25.0746302,-25.0740674,-25.0739846,-25.0738274,-25.0736639,-25.0731845,-25.0727459,-25.072036,-25.0714826,-25.0713115,-25.0708563,-25.0704756,-25.0702438,-25.0701464,-25.0700091,-25.0696303,-25.0695112,-25.0694659,-25.0691762,-25.0691017,-25.0689279,-25.0687128,-25.0686548,-25.0686631,-25.0686052,-25.068481,-25.0684397,-25.0684058,-25.0683613,-25.0681851,-25.0679906,-25.06785,-25.0676389,-25.0674072,-25.0674953,-25.0669252,-25.0662301,-25.0657336,-25.0657409,-25.0656454,-25.0653971,-25.0649571,-25.0648113,-25.0643788,-25.0639019,-25.0636833,-25.0633256,-25.0630275,-25.0631199,-25.0631414,-25.0627113,-25.0619158,-25.0614969,-25.0613976,-25.06153,-25.0621635,-25.0607101,-25.0576775,-25.0550405,-25.0529751,-25.0530476,-25.0526839,-25.0518233,-25.0511944,-25.0509958,-25.0508965,-25.051062,-25.0511944,-25.0514923,-25.0515916,-25.051804,-25.0520025,-25.0522672,-25.0525319,-25.05278,-25.0527469,-25.0525153,-25.0524277,-25.0522134,-25.0511546,-25.050676,-25.0499015,-25.0484953,-25.0477509,-25.0471057,-25.0461255,-25.044008,-25.0418243,-25.0415486,-25.0409682,-25.0405184,-25.0403023,-25.0390451,-25.0390419,-25.0388755,-25.0384536,-25.0379739,-25.0379387,-25.0363651,-25.0350132,-25.0342394,-25.0333291,-25.0330771,-25.0326966,-25.032358,-25.0318612,-25.0314559,-25.0307859,-25.0307426,-25.029814,-25.0284905,-25.0281484,-25.0270912,-25.0262124,-25.0256493,-25.0251088,-25.0246767,-25.0238537,-25.0227825,-25.0219547,-25.0217083,-25.0210709,-25.0208979,-25.0206672,-25.0202786,-25.020219,-25.0199295,-25.0197227,-25.0191519,-25.0187384,-25.0179526,-25.01718,-25.016687,-25.0161824,-25.0157937,-25.0148938,-25.0140005,-25.0128426,-25.0119619,-25.0118812,-25.0116414,-25.0113518,-25.0111451,-25.0111242,-25.0110104,-25.0107304,-25.010657,-25.0106901,-25.0104006,-25.010169,-25.009954,-25.0096479,-25.0094411,-25.009102,-25.0089283,-25.0086967,-25.0086636,-25.0083327,-25.0083079,-25.00825,-25.0081673,-25.0077785,-25.0073567,-25.0070424,-25.0067032,-25.0063724,-25.0063641,-25.005661,-25.0055287,-25.0050737,-25.0048587,-25.0045692,-25.0044203,-25.0042631,-25.0040894,-25.0040721,-24.9976273,-24.9976609,-24.9980518,-25.0016711,-25.0022346,-25.0026923,-25.0032124,-25.0037949,-25.0043358,-25.0048492,-25.0056049,-25.0063955,-25.0068323,-25.0077685,-25.0085155,-25.0102436,-25.0108946,-25.011868,-25.0123997,-25.0130659,-25.0134365,-25.0138266,-25.0143803,-25.0159003,-25.0167962,-25.0171083,-25.0173398,-25.0175205,-25.0178224,-25.0183014,-25.0186322,-25.0188013,-25.0190534,-25.0192933,-25.0195857,-25.0199188,-25.0201772,-25.0203064,-25.0205376,-25.0207756,-25.0209524,-25.0211495,-25.0213263,-25.0214895,-25.0216595,-25.0218966,-25.0220726,-25.0226412,-25.0234553,-25.0240549,-25.0243214,-25.0247212,-25.0248877,-25.0251431,-25.026198,-25.0265533,-25.0274198,-25.0279494,-25.0296708,-25.031359,-25.0329149,-25.0340404,-25.0346031,-25.0355962,-25.0369866,-25.0391383,-25.0416707,-25.0431272,-25.0442858,-25.0463382,-25.0483575,-25.0512375,-25.0529588,-25.0544816,-25.0554581,-25.0569892,-25.0594388,-25.0611933,-25.0633781,-25.0647932,-25.0651905,-25.0654222,-25.0662167,-25.0661836,-25.0665671,-25.0668814,-25.0669155,-25.072269,-25.0805845]},{"lng":[-47.921393,-47.9209875,-47.9207807,-47.9207558,-47.920822,-47.92064,-47.9206814,-47.9206814,-47.9207254,-47.920891,-47.9210372,-47.9213544,-47.9216247,-47.921873,-47.9221129,-47.9223281,-47.9230066,-47.9233045,-47.9244961,-47.925456,-47.9252905,-47.9250919,-47.9241982,-47.9229735,-47.9220219,-47.921393],"lat":[-25.0435338,-25.0435835,-25.0439641,-25.0446096,-25.0450482,-25.0456853,-25.0462977,-25.046728,-25.0469672,-25.0468513,-25.0460991,-25.0461148,-25.0459584,-25.0464135,-25.047299,-25.047903,-25.0494091,-25.050369,-25.0516599,-25.0504021,-25.0491112,-25.0473569,-25.0457681,-25.0442786,-25.0430373,-25.0435338]}]],[[{"lng":[-47.955341,-47.9567314,-47.9579231,-47.9587507,-47.9592472,-47.9606044,-47.9637161,-47.9673233,-47.9675052,-47.9682163,-47.9689233,-47.9696097,-47.9703291,-47.9704481,-47.9705346,-47.9710948,-47.9714569,-47.9717857,-47.9717885,-47.9722268,-47.9725906,-47.9730454,-47.973525,-47.9738806,-47.9740625,-47.9740962,-47.9747034,-47.975183,-47.9756708,-47.975985,-47.9762414,-47.9764812,-47.9765639,-47.9766796,-47.9774388,-47.977538,-47.9776536,-47.9777114,-47.9776536,-47.9779855,-47.9784699,-47.9790569,-47.9795527,-47.9800144,-47.9801511,-47.980248,-47.9806298,-47.9807609,-47.9811616,-47.9813565,-47.9814363,-47.9815331,-47.9815958,-47.9818124,-47.9821201,-47.9826387,-47.9829351,-47.983032,-47.9832571,-47.9840606,-47.9843228,-47.9844944,-47.9847071,-47.9853965,-47.9866537,-47.9892012,-47.9904914,-47.9921126,-47.9937006,-47.9952555,-47.9964797,-47.998564,-47.9996011,-47.9999535,-48.0020744,-48.0049823,-48.0066365,-48.0079598,-48.0091839,-48.0103088,-48.0113013,-48.012054,-48.0129886,-48.0146428,-48.0168925,-48.019043,-48.0213258,-48.0232116,-48.0239394,-48.0249981,-48.0260568,-48.0266854,-48.0277772,-48.0276118,-48.0273843,-48.0272272,-48.0271445,-48.0274133,-48.0278103,-48.0283065,-48.0287697,-48.0295307,-48.0300269,-48.0304239,-48.0317142,-48.0310525,-48.0290013,-48.0274794,-48.0263546,-48.0260742,-48.0255446,-48.0242536,-48.0228632,-48.0218862,-48.0210757,-48.0196191,-48.0184936,-48.018152,-48.0167391,-48.0155805,-48.0143557,-48.0133626,-48.0119723,-48.0107806,-48.0097213,-48.0095557,-48.0095738,-48.0098206,-48.0079668,-48.0058813,-48.0047227,-48.0028689,-48.0002562,-47.9970495,-47.9951739,-47.9926069,-47.9904221,-47.9884028,-47.9864828,-47.9845629,-47.9818484,-47.9779753,-47.9748636,-47.9728609,-47.9700968,-47.9682761,-47.966323,-47.9677851,-47.9679754,-47.9688626,-47.9696252,-47.9700919,-47.9706041,-47.9710139,-47.9722015,-47.9757929,-47.9792187,-47.9812378,-47.9831907,-47.9849616,-47.9868317,-47.9883543,-47.9896121,-47.9921939,-47.9935345,-47.9948585,-47.9966459,-47.9988305,-48.0001545,-48.0017267,-48.0036134,-48.0056491,-48.0065285,-48.0075246,-48.0076847,-48.009439,-48.0109782,-48.0134772,-48.0157755,-48.0170158,-48.0178326,-48.0184074,-48.0185889,-48.0184982,-48.0180141,-48.0168646,-48.0157301,-48.0152158,-48.0143839,-48.0133856,-48.012236,-48.0112639,-48.0097403,-48.0087574,-48.0076492,-48.0067178,-48.0058578,-48.0051697,-48.0038182,-48.001577,-48.0011347,-48.0007415,-48.000134,-47.9993163,-47.9985299,-47.9974757,-47.9972113,-47.9970144,-47.9966675,-47.9963506,-47.9960862,-47.9957645,-47.9957599,-47.9955068,-47.9953605,-47.9952874,-47.9950736,-47.9947192,-47.9941398,-47.9937798,-47.9934479,-47.993116,-47.9926547,-47.9918642,-47.990395,-47.9887298,-47.9884744,-47.988371,-47.9879844,-47.9875979,-47.9870753,-47.986569,-47.985502,-47.9850533,-47.9843038,-47.9834925,-47.9831642,-47.9826426,-47.9820857,-47.9817376,-47.9815172,-47.981494,-47.9812968,-47.9807051,-47.9803802,-47.980067,-47.9795333,-47.9781875,-47.9772594,-47.9765501,-47.9757743,-47.9754611,-47.9750434,-47.9745329,-47.9740109,-47.9737668,-47.9734636,-47.973338,-47.9730631,-47.9728733,-47.9724686,-47.9724206,-47.9721449,-47.9716534,-47.9705862,-47.9698191,-47.9693636,-47.9685723,-47.9680568,-47.9677811,-47.9673016,-47.9669659,-47.9665822,-47.9605849,-47.960309,-47.9600041,-47.9598153,-47.9594951,-47.9590167,-47.9587408,-47.9584649,-47.9582471,-47.9579276,-47.9578695,-47.9573622,-47.9568821,-47.9567336,-47.9565812,-47.9564901,-47.9564238,-47.9563942,-47.9560835,-47.9558947,-47.9558367,-47.9557495,-47.9554368,-47.955083,-47.9547036,-47.9546274,-47.9542181,-47.9540419,-47.9535132,-47.9530601,-47.9528651,-47.9524528,-47.9517742,-47.951145,-47.9547258,-47.955341],"lat":[-24.9969824,-24.9982735,-24.9994321,-25.0001603,-25.0006238,-25.0022127,-25.0041327,-25.0053368,-25.0055683,-25.0062216,-25.0069037,-25.0074826,-25.0081606,-25.0081755,-25.0082634,-25.0087209,-25.0090199,-25.0094625,-25.0095085,-25.010079,-25.0105504,-25.0110713,-25.0115675,-25.0118321,-25.0119396,-25.0119396,-25.0124109,-25.0127995,-25.0132047,-25.0135189,-25.0137587,-25.0142466,-25.0144699,-25.0146518,-25.0152835,-25.0152669,-25.0152339,-25.015333,-25.0154817,-25.0158591,-25.0163549,-25.0168451,-25.0172611,-25.0176201,-25.0176885,-25.0176486,-25.0180419,-25.0181843,-25.0184713,-25.0185747,-25.0185291,-25.0185747,-25.018683,-25.0187742,-25.0189337,-25.0192586,-25.019327,-25.0196005,-25.0197345,-25.0200251,-25.020122,-25.0202819,-25.0203606,-25.0210571,-25.0212887,-25.0217519,-25.0225128,-25.0223805,-25.0216196,-25.0216527,-25.0222813,-25.0231084,-25.0234788,-25.0236046,-25.0236801,-25.0236708,-25.0239685,-25.0236046,-25.0239024,-25.0247956,-25.0252588,-25.0253307,-25.0253912,-25.0258874,-25.0265491,-25.0279055,-25.0288981,-25.0298575,-25.0317102,-25.0345885,-25.0367059,-25.0399812,-25.0405768,-25.0413377,-25.0418603,-25.0419554,-25.0422491,-25.0435766,-25.0450984,-25.0466865,-25.0484068,-25.0504911,-25.0535349,-25.0554868,-25.0578358,-25.0604163,-25.061872,-25.0634435,-25.0647834,-25.0665653,-25.0688825,-25.0698756,-25.0702066,-25.0703514,-25.0704715,-25.0703391,-25.0702728,-25.0702728,-25.0702728,-25.0705377,-25.0713653,-25.0729542,-25.0736825,-25.0741459,-25.0754369,-25.0766287,-25.0778435,-25.078979,-25.0805514,-25.0816107,-25.0814286,-25.0800383,-25.0789024,-25.0785393,-25.0782973,-25.0785155,-25.0784493,-25.0789128,-25.079641,-25.0800052,-25.0804024,-25.0807335,-25.0806341,-25.0807335,-25.0811803,-25.0811803,-25.0805845,-25.072269,-25.0669155,-25.0669437,-25.0668754,-25.0668071,-25.0667275,-25.0666329,-25.0668424,-25.0666604,-25.0662466,-25.0663128,-25.0662632,-25.0657998,-25.0653529,-25.0651378,-25.0651543,-25.0649557,-25.0645916,-25.0644923,-25.0649723,-25.0639296,-25.0624898,-25.0614637,-25.0593784,-25.0576572,-25.0572711,-25.0568338,-25.0567635,-25.0561511,-25.0560022,-25.055605,-25.0541562,-25.0520688,-25.0501629,-25.0476822,-25.0444755,-25.0418133,-25.0410873,-25.0389394,-25.0371091,-25.0365344,-25.0352184,-25.0344016,-25.033857,-25.0330382,-25.0320307,-25.0313918,-25.0309488,-25.0307038,-25.0305563,-25.0305317,-25.03063,-25.0305493,-25.0305739,-25.0304756,-25.0304362,-25.0303036,-25.0302053,-25.030185,-25.0302188,-25.030185,-25.0300894,-25.0300781,-25.0299881,-25.0300325,-25.0300331,-25.0301569,-25.0302356,-25.0301062,-25.0299037,-25.0297406,-25.0294762,-25.0293074,-25.029178,-25.0290599,-25.0288968,-25.0286398,-25.028152,-25.0276312,-25.0277081,-25.0275448,-25.0273869,-25.0271093,-25.0269133,-25.0267228,-25.0263145,-25.0261209,-25.0257666,-25.0254212,-25.0253254,-25.0251375,-25.0249403,-25.0250679,-25.0252419,-25.0250911,-25.0249055,-25.0246154,-25.0244646,-25.0244066,-25.0240238,-25.0235017,-25.0229796,-25.0227148,-25.0223299,-25.0220979,-25.0218658,-25.0215062,-25.0212857,-25.0212486,-25.0210345,-25.0210341,-25.0210648,-25.0209965,-25.0210225,-25.0206869,-25.0204231,-25.0202073,-25.0194608,-25.0190444,-25.0186248,-25.0180854,-25.0176897,-25.0172821,-25.0170543,-25.0165988,-25.0161432,-25.0088952,-25.0086338,-25.0083724,-25.0084014,-25.008019,-25.0077916,-25.0074866,-25.0072543,-25.007051,-25.0070162,-25.0068419,-25.0062028,-25.0058836,-25.0059112,-25.0058114,-25.0056803,-25.0055312,-25.0053596,-25.0051575,-25.0050559,-25.0048381,-25.0046348,-25.0043782,-25.0040127,-25.0039425,-25.0035949,-25.003128,-25.0028385,-25.0023351,-25.0019827,-25.0017184,-25.0010376,-25.00021,-25.0000087,-24.9957956,-24.9969824]}]]],null,"Área de Estudo 2",{"interactive":true,"className":"","stroke":true,"color":["#98D594","#D3EECD"],"weight":2,"opacity":0.5,"fill":true,"fillColor":["#98D594","#D3EECD"],"fillOpacity":0.2,"smoothFactor":1,"noClip":false},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addPolygons","args":[[[[{"lng":[-47.9047536,-47.9052112,-47.9056103,-47.9067832,-47.9070765,-47.9077746,-47.9082724,-47.908867,-47.916296,-47.9169121,-47.9176818,-47.9184516,-47.9189717,-47.9196582,-47.9203941,-47.9209481,-47.921697,-47.9221547,-47.9229869,-47.923739,-47.925063,-47.925434,-47.9259851,-47.9261908,-47.9264098,-47.9263415,-47.9264293,-47.9262878,-47.9262576,-47.9263985,-47.9265999,-47.9265898,-47.9262138,-47.92609,-47.9259133,-47.9256818,-47.925594,-47.9254932,-47.9253035,-47.9251131,-47.9247052,-47.9242292,-47.9238416,-47.923794,-47.9234269,-47.9232433,-47.9230325,-47.9226925,-47.9224953,-47.9223865,-47.922288,-47.9222959,-47.922322,-47.9222329,-47.9221737,-47.9221329,-47.9222329,-47.9222107,-47.9220996,-47.9222218,-47.9220663,-47.9220441,-47.9220454,-47.9219792,-47.9216813,-47.9214827,-47.9218137,-47.922542,-47.9231047,-47.9237668,-47.9248592,-47.926084,-47.9266964,-47.9270937,-47.9280206,-47.9294771,-47.9294771,-47.9287157,-47.9286273,-47.9286164,-47.9306026,-47.9315791,-47.9321543,-47.9327303,-47.9302612,-47.9265405,-47.919336,-47.9112521,-47.9108954,-47.9120535,-47.9125828,-47.9130333,-47.9133645,-47.9134187,-47.9136954,-47.913627,-47.9136416,-47.9133604,-47.9134265,-47.9132653,-47.9132653,-47.9131991,-47.9131329,-47.9130795,-47.9131205,-47.9129344,-47.9129344,-47.9128682,-47.9128672,-47.9128972,-47.9129054,-47.9125828,-47.9125485,-47.9127028,-47.9129592,-47.9130093,-47.9127565,-47.9125911,-47.9125249,-47.9126431,-47.9129054,-47.9130957,-47.9130461,-47.9130305,-47.9130006,-47.9136292,-47.9139029,-47.9142262,-47.914498,-47.9147319,-47.9150029,-47.915295,-47.9160258,-47.9167601,-47.917403,-47.9175957,-47.9178477,-47.9180912,-47.9182113,-47.9183299,-47.9183026,-47.9181455,-47.9181207,-47.9182199,-47.9182282,-47.9184681,-47.9186389,-47.9187079,-47.9186914,-47.9187162,-47.9183289,-47.9176342,-47.9164597,-47.9153164,-47.9151843,-47.9149692,-47.9145804,-47.9141338,-47.9140356,-47.9139166,-47.913506,-47.9132901,-47.9131743,-47.9126614,-47.9121072,-47.9114538,-47.9105191,-47.9099235,-47.9089971,-47.9083106,-47.9079714,-47.907806,-47.9073097,-47.9070119,-47.9064577,-47.9057381,-47.9047952,-47.9039101,-47.9031822,-47.9027604,-47.902322,-47.9021813,-47.9014204,-47.9011226,-47.9007007,-47.9003781,-47.8997743,-47.8995593,-47.8995014,-47.8991539,-47.8989153,-47.8988727,-47.8984591,-47.8981862,-47.8978388,-47.8974831,-47.8971274,-47.8966725,-47.8987115,-47.9009969,-47.9041729,-47.9043606,-47.9045073,-47.9045659,-47.9047536],"lat":[-24.9974513,-24.997422,-24.9975414,-24.9976918,-24.9976038,-24.9976273,-24.9976609,-24.9980518,-25.0016711,-25.0022346,-25.0026923,-25.0032124,-25.0037949,-25.0043358,-25.0048492,-25.0056049,-25.0063955,-25.0068323,-25.0077685,-25.0085155,-25.0102436,-25.0108946,-25.011868,-25.0123997,-25.0130659,-25.0134365,-25.0138266,-25.0143803,-25.0159003,-25.0167962,-25.0171083,-25.0173398,-25.0175205,-25.0178224,-25.0183014,-25.0186322,-25.0188013,-25.0190534,-25.0192933,-25.0195857,-25.0199188,-25.0201772,-25.0203064,-25.0205376,-25.0207756,-25.0209524,-25.0211495,-25.0213263,-25.0214895,-25.0216595,-25.0218966,-25.0220726,-25.0226412,-25.0234553,-25.0238103,-25.0240549,-25.0243214,-25.0247212,-25.0248877,-25.0251431,-25.026198,-25.0265533,-25.0274198,-25.0279494,-25.0296708,-25.031359,-25.0329149,-25.0340404,-25.0346031,-25.0355962,-25.0369866,-25.0391383,-25.0416707,-25.0431272,-25.0442858,-25.0463382,-25.0483575,-25.0512375,-25.0527782,-25.0529588,-25.0544816,-25.0554581,-25.0569892,-25.057452,-25.057638,-25.0580186,-25.0581539,-25.0567671,-25.05278,-25.0527469,-25.0525153,-25.0524277,-25.0522134,-25.052035,-25.0511546,-25.050676,-25.0499015,-25.0484953,-25.0477509,-25.0471057,-25.0461255,-25.044008,-25.0418243,-25.0415486,-25.0409682,-25.0405184,-25.0403023,-25.0390451,-25.0390419,-25.0388755,-25.0384536,-25.0379739,-25.0379387,-25.0363651,-25.0350132,-25.0342394,-25.0333291,-25.0330771,-25.0326966,-25.032358,-25.0318612,-25.0314559,-25.0307859,-25.0307426,-25.029814,-25.0284905,-25.0281484,-25.0270912,-25.0262124,-25.0256493,-25.0251088,-25.0246767,-25.0238537,-25.0227825,-25.0219547,-25.0217083,-25.0210709,-25.0208979,-25.0206672,-25.0202786,-25.020219,-25.0199295,-25.0197227,-25.0191519,-25.0187384,-25.0179526,-25.01718,-25.016687,-25.0161824,-25.0157937,-25.0148938,-25.0140005,-25.0128426,-25.0119619,-25.0118812,-25.0116414,-25.0113518,-25.0111451,-25.0111242,-25.0110104,-25.0107304,-25.010657,-25.0106901,-25.0104006,-25.010169,-25.009954,-25.0096479,-25.0094411,-25.009102,-25.0089283,-25.0086967,-25.0086636,-25.0083327,-25.0083079,-25.00825,-25.0081673,-25.0077785,-25.0073567,-25.0070424,-25.0067032,-25.0063724,-25.0063641,-25.005661,-25.0055287,-25.0050737,-25.0048587,-25.0045692,-25.0044203,-25.0042631,-25.0040894,-25.0038577,-25.0038164,-25.0034525,-25.0030472,-25.002675,-25.0023441,-25.0016576,-25.0012771,-24.9986988,-24.9969407,-24.9972049,-24.9972284,-24.9970876,-24.9972401,-24.9974513]},{"lng":[-47.921393,-47.9209875,-47.9207807,-47.9207558,-47.920822,-47.92064,-47.9206814,-47.9206814,-47.9207254,-47.920891,-47.9210372,-47.9213544,-47.9216247,-47.921873,-47.9221129,-47.9223281,-47.9230066,-47.9233045,-47.9244961,-47.925456,-47.9252905,-47.9250919,-47.9241982,-47.9229735,-47.9220219,-47.921393],"lat":[-25.0435338,-25.0435835,-25.0439641,-25.0446096,-25.0450482,-25.0456853,-25.0462977,-25.046728,-25.0469672,-25.0468513,-25.0460991,-25.0461148,-25.0459584,-25.0464135,-25.047299,-25.047903,-25.0494091,-25.050369,-25.0516599,-25.0504021,-25.0491112,-25.0473569,-25.0457681,-25.0442786,-25.0430373,-25.0435338]}]],[[{"lng":[-47.9267097,-47.9332646,-47.9353322,-47.9417873,-47.9456604,-47.9471335,-47.948259,-47.9529638,-47.9584589,-47.9599817,-47.9652704,-47.9667803,-47.9688626,-47.9696252,-47.9700919,-47.9706041,-47.9710139,-47.9722015,-47.9757929,-47.9728609,-47.9700968,-47.9682761,-47.966323,-47.9635092,-47.961192,-47.9582458,-47.9546045,-47.9517576,-47.9506321,-47.9490101,-47.9477852,-47.9469577,-47.9449715,-47.9435408,-47.9425634,-47.9425091,-47.9423738,-47.9418111,-47.9413683,-47.9411132,-47.9408676,-47.9403379,-47.9389144,-47.9384261,-47.9379627,-47.9372013,-47.9368785,-47.9366302,-47.9360923,-47.9353806,-47.9343378,-47.9337088,-47.9327405,-47.9318467,-47.9310108,-47.9299845,-47.9292397,-47.9291073,-47.9284204,-47.9279613,-47.927497,-47.9267532,-47.9264774,-47.9263348,-47.9261279,-47.9261113,-47.9262851,-47.9263785,-47.9264132,-47.9264525,-47.926406,-47.9264176,-47.9263182,-47.9261113,-47.9256893,-47.9253582,-47.9250768,-47.9245885,-47.9242161,-47.9236533,-47.9235306,-47.9235064,-47.9234532,-47.9232906,-47.9230931,-47.9230533,-47.9226064,-47.9224326,-47.9221016,-47.9218202,-47.9212657,-47.9206119,-47.9202229,-47.9198422,-47.919685,-47.9191967,-47.9187001,-47.9183277,-47.9181208,-47.9180938,-47.9178622,-47.9170935,-47.9164267,-47.9159982,-47.915322,-47.9141373,-47.9132159,-47.9135183,-47.9112521,-47.9192346,-47.9267097],"lat":[-25.0583906,-25.057845,-25.0594388,-25.0611933,-25.0633781,-25.0647932,-25.0651905,-25.0654222,-25.0662167,-25.0661836,-25.0665671,-25.0668814,-25.0669437,-25.0668754,-25.0668071,-25.0667275,-25.0666329,-25.0668424,-25.0666604,-25.0807335,-25.0811803,-25.0811803,-25.0805845,-25.0814948,-25.0815776,-25.0819417,-25.081081,-25.0797569,-25.0790617,-25.0785321,-25.078499,-25.0780686,-25.0779693,-25.0781889,-25.0779756,-25.0779366,-25.0779489,-25.0778165,-25.0776653,-25.0776473,-25.0775599,-25.0774771,-25.0770551,-25.0767075,-25.076575,-25.0764261,-25.0763764,-25.0761695,-25.0760371,-25.0758054,-25.0757143,-25.0754578,-25.0753998,-25.0752923,-25.0750191,-25.0746302,-25.0740674,-25.0739846,-25.0738274,-25.0736639,-25.0731845,-25.072036,-25.0714826,-25.0713115,-25.0708563,-25.0704756,-25.0702438,-25.0701464,-25.0700091,-25.0696303,-25.0695112,-25.0694659,-25.0691762,-25.0691017,-25.0687128,-25.0686548,-25.0686631,-25.0686052,-25.068481,-25.0684397,-25.0684058,-25.0683613,-25.0681851,-25.0679906,-25.06785,-25.0676389,-25.0674072,-25.0675479,-25.0676803,-25.0677383,-25.0677052,-25.067432,-25.0673162,-25.0669355,-25.0667534,-25.0665548,-25.0662486,-25.0659755,-25.065752,-25.0657409,-25.0656454,-25.0653971,-25.0649571,-25.0648113,-25.0643788,-25.0639019,-25.0636833,-25.061773,-25.0572068,-25.0585936,-25.0583906]}]]],null,"Área de Estudo 3",{"interactive":true,"className":"","stroke":true,"color":["#D3EECD","#98D594"],"weight":2,"opacity":0.5,"fill":true,"fillColor":["#D3EECD","#98D594"],"fillOpacity":0.2,"smoothFactor":1,"noClip":false},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addPolylines","args":[[[[{"lng":[-47.9524903,-47.9574609,-47.9584834,-47.9643345,-47.9656695,-47.9721454,-47.9731111,-47.9807232,-47.9858642,-47.9903803,-47.9934762,-47.9990433,-48.0029345,-48.0071382,-48.0084732,-48.0135005,-48.0136425,-48.0221067,-48.017903,-48.0260264,-48.0194652,-48.0278442,-48.017903,-48.0282986,-48.0161988,-48.0231292,-48.0110863,-48.0177326,-48.0060873,-48.0120094,-48.0047381,-48.0003356,-47.9967568,-47.9924679,-47.9876678,-47.982612,-47.9785503,-47.9738922,-47.9697169,-47.9689358],"lat":[-24.9990204,-25.0006394,-25.0053544,-25.006036,-25.012228,-25.0128528,-25.0192436,-25.0193572,-25.0252366,-25.0231348,-25.0283042,-25.0239585,-25.0296107,-25.0239869,-25.0300084,-25.026884,-25.0330759,-25.0316274,-25.0399779,-25.0408868,-25.0444372,-25.0486409,-25.0525606,-25.0584116,-25.0557417,-25.064774,-25.0575596,-25.0679551,-25.0613088,-25.0719032,-25.0789756,-25.0647456,-25.0784359,-25.0665634,-25.0778963,-25.0686652,-25.0784359,-25.0677279,-25.0796857,-25.068225]}]],[[{"lng":[-47.9659816,-47.9626678,-47.9578199,-47.9548743,-47.9495506,-47.9473263,-47.9415409,-47.9389846,-47.9320462,-47.9330625,-47.9254504,-47.9272114,-47.92119,-47.9203663,-47.9159212,-47.9142738,-47.9084511,-47.9058664,-47.8975869,-47.8874753,-47.8923038,-47.9180372,-47.9201958,-47.9138619,-47.9196562,-47.9141744,-47.9203947,-47.9141175,-47.9220705,-47.9138903,-47.9208491,-47.9150549,-47.921474,-47.9205367,-47.9239167,-47.919855,-47.921616,-47.9148844,-47.9168159,-47.9088061,-47.9085789,-47.9011941],"lat":[-25.0800373,-25.0685619,-25.0789941,-25.0672732,-25.0770868,-25.0654936,-25.0754962,-25.0625443,-25.0725507,-25.0579004,-25.066535,-25.0535263,-25.0651148,-25.0553157,-25.0642201,-25.0578294,-25.061181,-25.0556707,-25.0593916,-25.0589939,-25.0531712,-25.0550743,-25.0531428,-25.0519499,-25.047519,-25.0447355,-25.0412987,-25.0376631,-25.0360725,-25.0338002,-25.0308463,-25.0283468,-25.0224957,-25.0187181,-25.0155085,-25.0136055,-25.0076976,-25.0098279,-25.0038632,-25.0078681,-25.0027271,-25.0031531]}]],[[{"lng":[-47.900768,-47.8969052,-47.9032675,-47.9005976,-47.8894067,-47.8792952,-47.8696949,-47.8609467,-47.860549,-47.8577087,-47.8462338,-47.8369743,-47.8407235,-47.8413484,-47.839843,-47.8322026,-47.8254994,-47.8178305,-47.8129452,-47.8100764,-47.8088835,-47.8110989,-47.8157571,-47.82033,-47.8254142,-47.8379187,-47.8433934,-47.8498268,-47.8543855,-47.8627929,-47.8687859,-47.8729896,-47.8773353,-47.8880434,-47.8934116,-47.8956838,-47.8974732,-47.8995751,-47.9052273,-47.9113056,-47.9121861,-47.9090334,-47.9090902,-47.912669,-47.9258765,-47.9377491,-47.9457588,-47.9496216,-47.9482299,-47.9535697],"lat":[-25.0020951,-24.9929492,-24.9730457,-24.9641839,-24.9604346,-24.9612867,-24.9660017,-24.9583896,-24.9448128,-24.9326562,-24.9282821,-24.9174889,-24.9125467,-24.9068945,-24.9032589,-24.9006458,-24.9066389,-24.9107005,-24.9105869,-24.9083999,-24.9048211,-24.8959308,-24.8924656,-24.8879779,-24.8881199,-24.8921781,-24.8937651,-24.8934526,-24.8949722,-24.9054956,-24.9143858,-24.9174534,-24.9171126,-24.9127669,-24.9130793,-24.9157492,-24.9273945,-24.93299,-24.9364836,-24.9396647,-24.9453738,-24.9519349,-24.9562522,-24.9601719,-24.9648868,-24.9703971,-24.9794861,-24.9847691,-24.9921824,-24.9964713]}]]],null,"Rotas 1",{"interactive":true,"className":"","stroke":true,"color":["#D3EECD","#98D594","#4CB062"],"weight":2,"opacity":0.5,"fill":false,"fillColor":["#D3EECD","#98D594","#4CB062"],"fillOpacity":0.2,"smoothFactor":1,"noClip":false},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addPolylines","args":[[[[{"lng":[-47.9524903,-47.9574609,-47.9584834,-47.9643345,-47.9656695,-47.9721454,-47.9731111,-47.9807232,-47.9858642,-47.9903803,-47.9934762,-47.9990433,-48.0029345,-48.0071382,-48.0084732,-48.0135005,-48.0136425,-48.0221067,-48.017903,-48.0260264,-48.0194652,-48.0278442,-48.017903,-48.0282986,-48.0161988,-48.0231292,-48.0110863,-48.0177326,-48.0060873,-48.0120094,-48.0047381,-48.0003356,-47.9967568,-47.9924679,-47.9876678,-47.982612,-47.9785503,-47.9738922,-47.9697169,-47.9689358],"lat":[-24.9990204,-25.0006394,-25.0053544,-25.006036,-25.012228,-25.0128528,-25.0192436,-25.0193572,-25.0252366,-25.0231348,-25.0283042,-25.0239585,-25.0296107,-25.0239869,-25.0300084,-25.026884,-25.0330759,-25.0316274,-25.0399779,-25.0408868,-25.0444372,-25.0486409,-25.0525606,-25.0584116,-25.0557417,-25.064774,-25.0575596,-25.0679551,-25.0613088,-25.0719032,-25.0789756,-25.0647456,-25.0784359,-25.0665634,-25.0778963,-25.0686652,-25.0784359,-25.0677279,-25.0796857,-25.068225]}]],[[{"lng":[-47.9659816,-47.9626678,-47.9578199,-47.9548743,-47.9495506,-47.9473263,-47.9415409,-47.9389846,-47.9320462,-47.9330625,-47.9254504,-47.9272114,-47.92119,-47.9203663,-47.9159212,-47.9142738,-47.9084511,-47.9058664,-47.8975869,-47.8874753,-47.8923038,-47.9180372,-47.9201958,-47.9138619,-47.9196562,-47.9141744,-47.9203947,-47.9141175,-47.9220705,-47.9138903,-47.9208491,-47.9150549,-47.921474,-47.9205367,-47.9239167,-47.919855,-47.921616,-47.9148844,-47.9168159,-47.9088061,-47.9085789,-47.9011941],"lat":[-25.0800373,-25.0685619,-25.0789941,-25.0672732,-25.0770868,-25.0654936,-25.0754962,-25.0625443,-25.0725507,-25.0579004,-25.066535,-25.0535263,-25.0651148,-25.0553157,-25.0642201,-25.0578294,-25.061181,-25.0556707,-25.0593916,-25.0589939,-25.0531712,-25.0550743,-25.0531428,-25.0519499,-25.047519,-25.0447355,-25.0412987,-25.0376631,-25.0360725,-25.0338002,-25.0308463,-25.0283468,-25.0224957,-25.0187181,-25.0155085,-25.0136055,-25.0076976,-25.0098279,-25.0038632,-25.0078681,-25.0027271,-25.0031531]}]]],null,"Rotas 2",{"interactive":true,"className":"","stroke":true,"color":["#D3EECD","#98D594"],"weight":2,"opacity":0.5,"fill":false,"fillColor":["#D3EECD","#98D594"],"fillOpacity":0.2,"smoothFactor":1,"noClip":false},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addPolylines","args":[[[[{"lng":[-47.926287789773,-47.9248932609073,-47.9235042984977,-47.9225961305454,-47.9219550711004,-47.920779795192,-47.9201387360137,-47.9198182064212,-47.9193374115603,-47.9191771465595,-47.9190703035563,-47.9192305677831,-47.9195510977323,-47.9202990004757,-47.9205661092019,-47.9217413848693,-47.9238782498012,-47.9264424880982,-47.9378747168711,-47.9389431501535,-47.9405457987158,-47.9537943629154,-47.9965316675531,-47.9993095925491,-48.0023012042209,-48.0041175390498,-48.0055065013966,-48.0066817775545,-48.0087208930685,-48.0106547119397,-48.0130719857896,-48.0153134567588,-48.0171593750597,-48.0185657886625,-48.0213193048241,-48.0250814388326,-48.0263999515753,-48.028245869751,-48.0292127795147,-48.0295863576178,-48.0295424069859,-48.0293666059036,-48.0288831508397,-48.0281359940748,-48.0237849018118,-48.0219389836304,-48.0213236775267,-48.021213801775,-48.0208621982147,-48.0201370159471],"lat":[-25.0143802607844,-25.0153291103823,-25.0161304348383,-25.017305710595,-25.0186412514285,-25.022914981872,-25.0262271231827,-25.0298063725433,-25.0338129947535,-25.037659352111,-25.0417728178138,-25.0462602344492,-25.0500531703186,-25.0539529493179,-25.0556090201705,-25.0571048257222,-25.0586006312273,-25.0599895936378,-25.0665070324808,-25.0668275626143,-25.0673617787334,-25.0701397034139,-25.0752681799852,-25.0754818666111,-25.0758023965783,-25.0770845153942,-25.0779392614587,-25.0793282240052,-25.0836587616785,-25.085460729201,-25.0866034404979,-25.0879219528806,-25.089064664168,-25.0908226811798,-25.0920425723558,-25.0941189628781,-25.0953495747797,-25.0982503030196,-25.1010631304592,-25.1038210193877,-25.104831879065,-25.1055790366214,-25.1059745902497,-25.106458045174,-25.1109849389198,-25.11529208045,-25.1177752794105,-25.1191377427624,-25.1206760075711,-25.1216209415886]}]],[[{"lng":[-47.926287789773,-47.9236378524314,-47.9219550709781,-47.9211270358475,-47.920272289526,-47.9191771463131,-47.9182689790249,-47.9176546296057,-47.9177614728495,-47.917868316223,-47.9173608111165,-47.9164526429294,-47.9157314510477,-47.9153219527739],"lat":[-25.0143802607844,-25.0153558211177,-25.0165043861346,-25.0181070351334,-25.0206712732897,-25.0248381606018,-25.0297262400426,-25.0346944513548,-25.0391551575133,-25.0439631043395,-25.050854494908,-25.0551816467561,-25.0603368341934,-25.0643788410234]}]]],null,"Passeios",{"interactive":true,"className":"","stroke":true,"color":["#21908D","#21908D"],"weight":5,"opacity":0.5,"fill":false,"fillColor":["#21908D","#21908D"],"fillOpacity":0.2,"smoothFactor":1,"noClip":false},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addPolylines","args":[[[[{"lng":[-47.9262575898199,-47.9249199714584,-47.9234241663533,-47.9219817821159,-47.9218531454778,-47.9207172355308,-47.9204859763764,-47.9183299102808],"lat":[-25.0159003134921,-25.0168916929438,-25.0179601258491,-25.0189751367252,-25.019011890045,-25.0193364356959,-25.0194025097303,-25.0202786301627]}]],[[{"lng":[-47.9468032540554,-47.9496718029939,-47.951392932357],"lat":[-24.993728827842,-24.9912045047761,-24.9866913211128]}]]],null,"Balsa",{"interactive":true,"className":"","stroke":true,"color":["#440154","#440154"],"weight":5,"opacity":0.5,"fill":false,"fillColor":["#440154","#440154"],"fillOpacity":0.2,"smoothFactor":1,"noClip":false},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addPolylines","args":[[[[{"lng":[-47.8703230652825,-47.8817552940297,-47.8898753816088,-47.8945230640144,-47.9011473459398,-47.9079853146397,-47.9126864179706,-47.9143959104893,-47.9152773670064,-47.9158382948333,-47.9159985596508,-47.9156246081847,-47.9155711867628,-47.9160519809749,-47.9167998842015,-47.9175477866102,-47.9188833275701,-47.9201072505201,-47.9204325545952,-47.9214360225356,-47.92240915505,-47.9242789119421,-47.9259133490231],"lat":[-25.0525372762992,-25.0544070332531,-25.054139924945,-25.0535522872841,-25.0534454438721,-25.0541933466836,-25.0537659735459,-25.0529646492597,-25.0510948919793,-25.048370389179,-25.0449514047718,-25.0389147604703,-25.0336794407658,-25.0290851802783,-25.0258264610094,-25.0235560414821,-25.0219533926593,-25.021299226722,-25.0211253572434,-25.0205287006966,-25.019950081428,-25.0192021785013,-25.0183013928571]}]]],null,"Pesca",{"interactive":true,"className":"","stroke":true,"color":"#FDE725","weight":5,"opacity":0.5,"fill":false,"fillColor":"#FDE725","fillOpacity":0.2,"smoothFactor":1,"noClip":false},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addCircleMarkers","args":[[-25.0620224793778,-25.0622254232572,-25.0723726183236,-25.0681403923756,-25.0776111078241,-25.0711169029867,-25.0032429211031,-25.0047246515473,-25.0140685270617,-25.0279701844342,-25.0441297748538,-25.0508013731788,-25.0642638356708],[-47.9183339993973,-47.9317282967497,-47.9360577667528,-47.9490334922819,-47.9571512485083,-47.968313162922,-47.9011835496838,-47.9143427691746,-47.9224055614351,-47.9176871162059,-47.9190204157372,-47.9142751219062,-47.9160602018774],5,null,"Estações de Coleta",{"interactive":true,"className":"","stroke":true,"color":"blue","weight":5,"opacity":0.5,"fill":true,"fillColor":"blue","fillOpacity":0.2},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLayersControl","args":[["Área de Estudo 1","Área de Estudo 2","Área de Estudo 3",""],["Rotas 1","Rotas 2","Passeios","Balsa","Pesca","Estações de Coleta"],{"collapsed":true,"autoZIndex":true,"position":"topright"}]},{"method":"hideGroup","args":[["Área de Estudo 1","Área de Estudo 2","Área de Estudo 3","Rotas 1","Rotas 2","Estações de Coleta","Passeios","Balsa","Pesca"]]},{"method":"addMeasure","args":[{"position":"topright","primaryLengthUnit":"kilometers","primaryAreaUnit":"sqmeters","activeColor":"#ABE67E","completedColor":"#C8F2BE","popupOptions":{"className":"leaflet-measure-resultpopup","autoPanPadding":[10,10]},"captureZIndex":10000,"localization":"en","decPoint":".","thousandsSep":","}]}],"limits":{"lat":[-25.1216209415886,-24.8866931],"lng":[-48.0317142,-47.8015951]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+
+</div>
+
+<script>
+
+$(document).ready(function () {
+
+  // add bootstrap table styles to pandoc tables
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+
+  // initialize mathjax
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+  document.getElementsByTagName("head")[0].appendChild(script);
+
+});
+</script>
+
+<div id="flexdashboard-source-code">
+<pre class="line-numbers"><code class="language-r">---
+title: "Áreas de Estudo"
+author: "Projeto Boto-Cinza"
+output:
+  flexdashboard::flex_dashboard:
+    theme: paper
+    source_code: embed
+    
+---
+
+```{r setup, include=FALSE}
+library(dplyr) 
+library(leaflet)  
+library(sf)
+library(stringr)
+library(htmlwidgets)
+library(htmlTable)
+
+pasta_proj <- rprojroot::find_rstudio_root_file()
+
+arquivo_area <- paste0(pasta_proj, "/data/Areas_PBC.shp")
+arquivo_rota <- paste0(pasta_proj, "/data/Rotas_PBC.shp")
+arquivo_pnto <- paste0(pasta_proj, "/data/Pontos_PBC.shp")
+
+area_cru <- st_read(arquivo_area)
+rota_cru <- st_read(arquivo_rota)
+pnto_cru <- st_read(arquivo_pnto)
+
+areas <- area_cru %>%
+  filter(Tipo == "Area")  %>%
+  st_make_valid () %>%
+  mutate(Rota = c(2,3,1,2,2,1,1), 
+         Area = round(as.double(st_area(geometry)/1000^2),1),
+         Comp = 0,
+         Estacao = 0) %>%
+  select(Linha, Rota, Area, Comp, Tipo, Estacao, geometry)
+
+
+rotas <- 
+rota_cru %>%
+  filter(Tipo == "Pesquisa") %>%
+  st_make_valid() %>%
+  mutate(Comp = round(as.double(st_length(geometry)/1000), 1), 
+         Area = 0,
+         Estacao = 0) %>%
+  select(Linha, Rota, Area, Comp, Tipo, Estacao, geometry)
+
+
+rotas_embarc <- 
+  rota_cru %>%
+  filter(Tipo !="Pesquisa") %>%
+  mutate(Comp = 0,
+         Area = 0,
+         Estacao = 0) %>%
+  select(Linha, Rota, Area, Comp, Tipo, Estacao, geometry)
+
+
+pontos <-
+  pnto_cru %>% 
+  filter(Linha == 3) %>%
+  arrange(Estacoes) %>%
+  mutate(geometry = st_cast(geometry,"POINT"),
+         Estacao = Estacoes,
+         Area = 0,
+         Comp = 0,
+         Tipo = "Pontos") %>% 
+  select(Linha, Rota, Area, Comp, Tipo, Estacao, geometry)
+
+data <- 
+  bind_rows(areas, rotas, rotas_embarc, pontos) %>%
+  select(7,1:6)
+
+```
+
+
+Column { data-width=200}
+-------------------------------------
+
+### Objetivo 1
+
+```{r}
+data %>%
+  as_tibble() %>%
+  filter(Tipo == "Area", Linha == "1") %>% 
+  arrange(Rota) %>% 
+  select(1:3) %>% 
+  left_join(
+    data %>%
+      as_tibble() %>%
+      filter(Tipo == "Pesquisa", Linha == "1") %>%
+      arrange(Linha,Rota) %>%
+      select(1,2,4),
+    by = c("Linha", "Rota")) %>%
+  select(-1) %>%
+  addHtmlTableStyle(align = "c|c|c", 
+                    css.cell = c("width: 100;","width: 100;","width: 100;")) %>%
+  htmlTable(rnames = FALSE)
+
+```
+
+### Objetivo 2
+
+```{r}
+data %>%
+  as_tibble() %>%
+  filter(Tipo == "Area", Linha == "2") %>% 
+  arrange(Rota) %>% 
+  select(1:3) %>% 
+  left_join(
+    data %>% 
+      as_tibble() %>%
+      filter(Tipo == "Pesquisa", Linha  == "2") %>%
+      arrange(Linha,Rota) %>%
+      select(1,2,4),
+    by = c("Linha", "Rota")) %>% select(-1) %>%
+  addHtmlTableStyle(align = "c|c|c", 
+                    css.cell = c("width: 100;","width: 100;","width: 100;")) %>%
+  htmlTable(rnames = FALSE)
+
+```
+
+### Objetivo 3
+
+```{r}
+data %>% 
+  as_tibble() %>%
+  filter(Tipo == "Area", Linha == "3") %>%
+  arrange(Rota) %>%
+  select(2:4) %>% 
+  addHtmlTableStyle(align = "c|c|c", 
+                    css.cell = c("width: 100;","width: 100;","width: 100;")) %>%
+  htmlTable(rnames = FALSE)
+
+```
+
+
+Column {data-width=800}
+-------------------------------------
+    
+### Mapa
+    
+```{r map}
+
+pal_green <- colorNumeric(palette = "Greens",
+                         domain = 5:0)
+
+pal_lines <- colorFactor(palette = "viridis",
+                         domain = c("Passeio",
+                                    "Balsa",
+                                    "Pesca"))
+
+area_1 <- data %>% filter(Linha == 1, Tipo == "Area")
+area_2 <- data %>% filter(Linha == 2, Tipo == "Area")
+area_3 <- data %>% filter(Linha == 3, Tipo == "Area")
+rota_1 <- data %>% filter(Linha == 1, Tipo == "Pesquisa")
+rota_2 <- data %>% filter(Linha == 2, Tipo == "Pesquisa")
+rota_pas <- data %>% filter(Tipo == "Passeio")
+rota_bal <- data %>% filter(Tipo == "Balsa")
+rota_pes <- data %>% filter(Tipo == "Pesca")
+pnts <- data %>% filter(Estacao != 0)
+
+
+leaflet() %>%
+  addProviderTiles("Esri.WorldImagery") %>%
+  addScaleBar(position = "bottomleft") %>%
+  addPolygons(data = area_1, group = "Área de Estudo 1", weight = 2, color = ~pal_green(Rota)) %>%
+  addPolygons(data = area_2, group = "Área de Estudo 2", weight = 2, color = ~pal_green(Rota)) %>%
+  addPolygons(data = area_3, group = "Área de Estudo 3", weight = 2, color = ~pal_green(Rota)) %>%
+  addPolylines(data = rota_1, group = "Rotas 1", weight = 2, color = ~pal_green(Rota)) %>%
+  addPolylines(data = rota_2, group = "Rotas 2", weight = 2, color = ~pal_green(Rota)) %>%
+  addPolylines(data = rota_pas, group = "Passeios", color = ~pal_lines(Tipo)) %>%
+  addPolylines(data = rota_bal, group = "Balsa", color = ~pal_lines(Tipo)) %>%
+  addPolylines(data = rota_pes, group = "Pesca", color = ~pal_lines(Tipo)) %>%
+  addCircleMarkers(data = pnts, group = "Estações de Coleta", color = "blue", radius = 5) %>%
+  addLayersControl(baseGroups = c("Área de Estudo 1",
+                                  "Área de Estudo 2",
+                                  "Área de Estudo 3",
+                                  ""),
+                   overlayGroups = c("Rotas 1",
+                                     "Rotas 2",
+                                     "Passeios",
+                                     "Balsa",
+                                     "Pesca",
+                                     "Estações de Coleta")) %>%
+  hideGroup(c("Área de Estudo 1",
+              "Área de Estudo 2",
+              "Área de Estudo 3",
+              "Rotas 1",
+              "Rotas 2",
+              "Estações de Coleta",
+              "Passeios",
+              "Balsa",
+              "Pesca")) %>%
+  addMeasure(primaryLengthUnit = "kilometers",
+             primaryAreaUnit = "sqmeters")
+
+
+```
+
+</code></pre>
+</div>
+<script type="text/javascript">
+$(document).ready(function () {
+  FlexDashboard.init({
+    theme: "paper",
+    fillPage: true,
+    orientation: "columns",
+    storyboard: false,
+    defaultFigWidth: 576,
+    defaultFigHeight: 460,
+    defaultFigWidthMobile: 360,
+    defaultFigHeightMobile: 460,
+    resize_reload: true
+  });
+});
+</script>
+
+</body>
+</html>
